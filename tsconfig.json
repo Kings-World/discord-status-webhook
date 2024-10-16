@@ -1,3 +1,52 @@
 {
-    "extends": ["@sapphire/ts-config", "@sapphire/ts-config/extra-strict", "@sapphire/ts-config/verbatim"]
+    "compilerOptions": {
+        /* Basic */
+        "module": "ESNext",
+        "lib": ["ESNext"],
+        "target": "ESNext",
+        "outDir": "dist",
+        "rootDir": "src",
+
+        /* Modules */
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+
+        /* Emit */
+        "declaration": false,
+        "declarationMap": false,
+        "pretty": true,
+        "esModuleInterop": true,
+        "newLine": "lf",
+        "removeComments": true,
+        "useDefineForClassFields": true,
+        "importHelpers": true,
+
+        /* Source Maps */
+        "inlineSourceMap": true,
+        // "inlineSources": true,
+        // "sourceRoot": "/",
+
+        /* Strict Options */
+        "strict": true,
+        "skipLibCheck": true,
+        "alwaysStrict": true,
+        "allowSyntheticDefaultImports": true,
+        "strictNullChecks": true,
+        "strictBindCallApply": true,
+        "strictPropertyInitialization": true,
+        "verbatimModuleSyntax": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noImplicitReturns": false,
+        "noUnusedParameters": true,
+        "noEmitHelpers": false,
+        "preserveConstEnums": true,
+
+        /* Types */
+        "types": ["node"],
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/**/*.ts"]
 }
