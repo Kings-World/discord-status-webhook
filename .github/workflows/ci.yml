@@ -39,20 +39,3 @@ jobs:
 
       - name: Run Biome
         run: biome ci .
-
-  reviewdog:
-    if: github.event_name == 'pull_request'
-    name: Create Reviewdog report
-    runs-on: blacksmith-2vcpu-ubuntu-2204
-    permissions:
-      contents: read
-      pull-requests: write
-    steps:
-      - name: Checkout Project
-        uses: actions/checkout@v4
-
-      - name: Biome Reviewdog Action
-        uses: mongolyy/reviewdog-action-biome@v1
-        with:
-          github_token: ${{ secrets.github_token }}
-          reporter: github-pr-review
