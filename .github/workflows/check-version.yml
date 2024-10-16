@@ -1,0 +1,44 @@
+name: Check Version
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - package.json
+
+jobs:
+  check-version:
+    name: Check version
+    runs-on: blacksmith-2vcpu-ubuntu-2204
+    permissions:
+      contents: write
+      actions: write
+
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Automatic Release
+        uses: SerenModz21/github-action-npm-release@master
+        id: release
+
+      - name: Display Release ID
+        if: ${{ steps.release.outputs.released == 'true' }}
+        run: |
+          echo Release ID: ${{ steps.release.outputs.release_id }}
+          echo Release Name: ${{ steps.release.outputs.release_name }}
+          echo Release Tag: ${{ steps.release.outputs.release_tag }}
+          echo Prerelease: ${{ steps.release.outputs.prerelease }}
+          echo Draft: ${{ steps.release.outputs.draft }}
+          echo URL: ${{ steps.release.outputs.html_url }}
+
+      - name: Publish Version
+        if: ${{ steps.release.outputs.released == 'true' }}
+        run: |
+          gh workflow run publish.yml -r ${{ steps.release.outputs.release_tag }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
