@@ -2,30 +2,11 @@ import "dotenv/config";
 import "@total-typescript/ts-reset";
 import "@skyra/env-utilities";
 
-import { CronJob } from "cron";
-import { logger } from "./constants.js";
-import { checkApi } from "./functions/checkApi.js";
+import { startCronJob } from "./core/cron.js";
+import { startServer } from "./core/server.js";
 
-logger.info("Starting the cron job");
-
-const cronJob = CronJob.from({
-    cronTime: "*/5 * * * *",
-    onTick: () => {
-        logger.debug("Cron job started ticking");
-        void checkApi();
-    },
-    onComplete: () => {
-        logger.debug("Cron job completed");
-    },
-});
-
-for (const event of ["SIGINT", "SIGTERM"] as NodeJS.Signals[]) {
-    process.on(event, async (signal) => {
-        logger.info(`Shutdown: Received the ${signal} signal`);
-        cronJob.stop();
-        process.exit(0);
-    });
-}
+startCronJob();
+startServer();
 
 declare module "@skyra/env-utilities" {
     interface Env {

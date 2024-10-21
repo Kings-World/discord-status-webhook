@@ -24,6 +24,7 @@
         "postinstall": "is-ci || husky"
     },
     "dependencies": {
+        "@hono/node-server": "^1.13.2",
         "@sapphire/framework": "^5.2.1",
         "@sapphire/plugin-logger": "^4.0.2",
         "@sapphire/utilities": "^3.17.0",
@@ -34,6 +35,7 @@
         "discord-api-types": "^0.37.102",
         "discord.js": "^14.16.3",
         "drizzle-orm": "^0.35.1",
+        "hono": "^4.6.5",
         "ky": "^1.7.2",
         "pg": "^8.13.0",
         "zod": "^3.23.8",

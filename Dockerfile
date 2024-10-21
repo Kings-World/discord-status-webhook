@@ -52,6 +52,6 @@ RUN chmod +x /entrypoint.sh
 
 USER node
 
-EXPOSE 4000
+EXPOSE 3000
 
 CMD ["/entrypoint.sh"]

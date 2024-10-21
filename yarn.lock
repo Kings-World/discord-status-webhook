@@ -737,6 +737,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hono/node-server@npm:^1.13.2":
+  version: 1.13.2
+  resolution: "@hono/node-server@npm:1.13.2"
+  peerDependencies:
+    hono: ^4
+  checksum: 10/e60d5d215d5218052f2e25999d14bf8f2dee0f05c2f0236e9f1c758b232b78b53d5ac54e5d61762cf0a4e24dac669f679e30ea94b51d6e92dabed74254f9f3af
+  languageName: node
+  linkType: hard
+
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2
   resolution: "@isaacs/cliui@npm:8.0.2"
@@ -1294,6 +1303,7 @@ __metadata:
     "@biomejs/biome": "npm:1.9.3"
     "@commitlint/cli": "npm:^19.5.0"
     "@commitlint/config-conventional": "npm:^19.5.0"
+    "@hono/node-server": "npm:^1.13.2"
     "@sapphire/framework": "npm:^5.2.1"
     "@sapphire/plugin-logger": "npm:^4.0.2"
     "@sapphire/utilities": "npm:^3.17.0"
@@ -1307,6 +1317,7 @@ __metadata:
     discord.js: "npm:^14.16.3"
     drizzle-kit: "npm:^0.26.2"
     drizzle-orm: "npm:^0.35.1"
+    hono: "npm:^4.6.5"
     husky: "npm:^9.1.6"
     is-ci: "npm:^3.0.1"
     ky: "npm:^1.7.2"
@@ -1780,6 +1791,13 @@ __metadata:
   version: 3.0.0
   resolution: "has-flag@npm:3.0.0"
   checksum: 10/4a15638b454bf086c8148979aae044dd6e39d63904cd452d970374fa6a87623423da485dfb814e7be882e05c096a7ccf1ebd48e7e7501d0208d8384ff4dea73b
+  languageName: node
+  linkType: hard
+
+"hono@npm:^4.6.5":
+  version: 4.6.5
+  resolution: "hono@npm:4.6.5"
+  checksum: 10/59ef21f9ea91148aa4d3c79784f1c5241069ab10af397a133d3e3f2f18dfb9fc503218e8d31934c6c84bcf8db2f40a91e3ed2e387c8e98c47b4d76b830b92ef3
   languageName: node
   linkType: hard
 
