@@ -1,5 +1,4 @@
 import "dotenv/config";
-import "@total-typescript/ts-reset";
 import "@skyra/env-utilities";
 
 import { startCronJob } from "./core/cron.js";
