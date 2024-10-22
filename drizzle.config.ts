@@ -12,3 +12,9 @@ export default defineConfig({
         url: envParseString("DATABASE_URL"),
     },
 });
+
+declare module "@skyra/env-utilities" {
+    interface Env {
+        DATABASE_URL: string;
+    }
+}

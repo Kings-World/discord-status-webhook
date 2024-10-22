@@ -1,0 +1,66 @@
+{
+    "id": "c710afca-070d-46b7-9f5f-efab9e6fcce3",
+    "prevId": "00000000-0000-0000-0000-000000000000",
+    "version": "7",
+    "dialect": "postgresql",
+    "tables": {
+        "public.discord_status": {
+            "name": "discord_status",
+            "schema": "",
+            "columns": {
+                "incident_id": {
+                    "name": "incident_id",
+                    "type": "text",
+                    "primaryKey": true,
+                    "notNull": true
+                },
+                "update_id": {
+                    "name": "update_id",
+                    "type": "text",
+                    "primaryKey": false,
+                    "notNull": true
+                },
+                "message_id": {
+                    "name": "message_id",
+                    "type": "text",
+                    "primaryKey": false,
+                    "notNull": true
+                },
+                "status": {
+                    "name": "status",
+                    "type": "text",
+                    "primaryKey": false,
+                    "notNull": true
+                },
+                "created_at": {
+                    "name": "created_at",
+                    "type": "timestamp (3)",
+                    "primaryKey": false,
+                    "notNull": true,
+                    "default": "now()"
+                },
+                "updated_at": {
+                    "name": "updated_at",
+                    "type": "timestamp (3)",
+                    "primaryKey": false,
+                    "notNull": true,
+                    "default": "now()"
+                }
+            },
+            "indexes": {},
+            "foreignKeys": {},
+            "compositePrimaryKeys": {},
+            "uniqueConstraints": {},
+            "checkConstraints": {}
+        }
+    },
+    "enums": {},
+    "schemas": {},
+    "sequences": {},
+    "views": {},
+    "_meta": {
+        "columns": {},
+        "schemas": {},
+        "tables": {}
+    }
+}
