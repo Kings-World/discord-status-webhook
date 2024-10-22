@@ -4,9 +4,9 @@ import { type Context, Hono } from "hono";
 import type { StatusCode } from "hono/utils/http-status";
 import { z } from "zod";
 import { fromZodError } from "zod-validation-error";
-import { logger } from "../constants";
-import { processDiscordIncident } from "../functions/processIncident";
-import { componentUpdateWebhookSchema, incidentWebhookSchema } from "../zod";
+import { logger } from "../constants.js";
+import { processDiscordIncident } from "../functions/processIncident.js";
+import { componentUpdateWebhookSchema, incidentWebhookSchema } from "../zod.js";
 
 logger.info("Server: Creating the Hono server");
 
