@@ -11,7 +11,9 @@ export async function checkApi() {
 
         if (!parsed.success) {
             const formatted = fromZodError(parsed.error);
-            logger.error(`Failed to parse request body with reason: ${formatted.message}`);
+            logger.error(
+                `Failed to parse request body with reason: ${formatted.message}`,
+            );
             return;
         }
 
@@ -19,6 +21,9 @@ export async function checkApi() {
             await processDiscordIncident(incident);
         }
     } catch (error) {
-        logger.error("Something went wrong while fetching the incidents", error);
+        logger.error(
+            "Something went wrong while fetching the incidents",
+            error,
+        );
     }
 }

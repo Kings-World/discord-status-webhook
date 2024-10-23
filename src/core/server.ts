@@ -16,7 +16,9 @@ app.get("/", async (c) => {
     const body = await c.req.json();
     if (!body) return out(c, false, "No body provided.", 422);
 
-    const parsed = z.union([incidentWebhookSchema, componentUpdateWebhookSchema]).safeParse(body);
+    const parsed = z
+        .union([incidentWebhookSchema, componentUpdateWebhookSchema])
+        .safeParse(body);
 
     if (!parsed.success) {
         const reason = fromZodError(parsed.error);
@@ -26,9 +28,12 @@ app.get("/", async (c) => {
 
     if ("component" in parsed.data) {
         const { id, name } = body.data.component;
-        const { old_status, new_status, component_type } = body.data.component_update;
+        const { old_status, new_status, component_type } =
+            body.data.component_update;
 
-        logger.info(`DiscordComponent[${id}] The ${name} ${component_type} updated from ${old_status} to ${new_status}`);
+        logger.info(
+            `DiscordComponent[${id}] The ${name} ${component_type} updated from ${old_status} to ${new_status}`,
+        );
 
         return out(c, true, "Processed component update", 200);
     }
@@ -54,6 +59,11 @@ export function startServer() {
     });
 }
 
-function out<C extends Context, S extends StatusCode>(c: C, success: boolean, message: string, status: S) {
+function out<C extends Context, S extends StatusCode>(
+    c: C,
+    success: boolean,
+    message: string,
+    status: S,
+) {
     return c.json({ success, message }, status);
 }

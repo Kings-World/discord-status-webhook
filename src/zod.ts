@@ -1,10 +1,22 @@
 import { z } from "zod";
 
 // discord status incident status
-export const incidentStatusEnum = z.enum(["investigating", "identified", "monitoring", "resolved", "postmortem"]);
+export const incidentStatusEnum = z.enum([
+    "investigating",
+    "identified",
+    "monitoring",
+    "resolved",
+    "postmortem",
+]);
 
 // discord status incident impact
-export const incidentImpactEnum = z.enum(["none", "minor", "major", "critical", "maintenance"]);
+export const incidentImpactEnum = z.enum([
+    "none",
+    "minor",
+    "major",
+    "critical",
+    "maintenance",
+]);
 
 // discord status component
 export const componentSchema = z.object({

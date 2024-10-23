@@ -5,7 +5,9 @@ export const discordStatus = pgTable("discord_status", {
     updateId: text("update_id").notNull(),
     messageId: text("message_id").notNull(),
     status: text("status").notNull(),
-    createdAt: timestamp("created_at", { mode: "date", precision: 3 }).notNull().defaultNow(),
+    createdAt: timestamp("created_at", { mode: "date", precision: 3 })
+        .notNull()
+        .defaultNow(),
     updatedAt: timestamp("updated_at", { mode: "date", precision: 3 })
         .notNull()
         .defaultNow()

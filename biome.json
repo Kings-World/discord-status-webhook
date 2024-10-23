@@ -15,7 +15,6 @@
         "indentStyle": "space",
         "indentWidth": 4,
         "lineEnding": "lf",
-        "lineWidth": 150,
         "useEditorconfig": true
     },
     "files": {
@@ -37,9 +36,6 @@
                     "level": "warn",
                     "fix": "safe"
                 }
-            },
-            "suspicious": {
-                "noGlobalIsNan": "off"
             }
         }
     },
