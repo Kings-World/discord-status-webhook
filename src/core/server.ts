@@ -28,7 +28,7 @@ app.get("/", async (c) => {
         const { id, name } = body.data.component;
         const { old_status, new_status, component_type } = body.data.component_update;
 
-        logger.info(`Hono[${id}] The ${name} ${component_type} updated from ${old_status} to ${new_status}`);
+        logger.info(`DiscordComponent[${id}] The ${name} ${component_type} updated from ${old_status} to ${new_status}`);
 
         return out(c, true, "Processed component update", 200);
     }
