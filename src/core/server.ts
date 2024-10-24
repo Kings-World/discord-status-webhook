@@ -1,6 +1,7 @@
 import { createServer } from "node:http2";
 import { serve } from "@hono/node-server";
 import { type Context, Hono } from "hono";
+import { logger as loggerMiddleware } from "hono/logger";
 import type { StatusCode } from "hono/utils/http-status";
 import { z } from "zod";
 import { fromZodError } from "zod-validation-error";
@@ -12,7 +13,15 @@ logger.info("Server: Creating the Hono server");
 
 const app = new Hono();
 
-app.get("/", async (c) => {
+app.use(
+    loggerMiddleware((str, ...rest) =>
+        logger.info(`Hono[logger] ${str}`, ...rest),
+    ),
+);
+
+app.get("/", (c) => out(c, true, "Nothing to see here.", 200));
+
+app.post("/", async (c) => {
     const body = await c.req.json();
     if (!body) return out(c, false, "No body provided.", 422);
 
@@ -22,7 +31,7 @@ app.get("/", async (c) => {
 
     if (!parsed.success) {
         const reason = fromZodError(parsed.error);
-        logger.error(`Hono: Failed to parse the body with reason: ${reason}`);
+        logger.error(`Zod: Failed to parse the body with reason: ${reason}`);
         return out(c, false, reason.toString(), 422);
     }
 
