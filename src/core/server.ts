@@ -1,4 +1,3 @@
-import { createServer } from "node:http2";
 import { serve } from "@hono/node-server";
 import { type Context, Hono } from "hono";
 import { logger as loggerMiddleware } from "hono/logger";
@@ -63,7 +62,7 @@ app.notFound((c) => {
 
 export function startServer() {
     logger.info("Server: Starting the Hono server");
-    serve({ fetch: app.fetch, createServer }, (info) => {
+    serve(app, (info) => {
         logger.info(`Hono: Listening on ${info.address}:${info.port}`);
     });
 }
