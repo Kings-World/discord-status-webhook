@@ -48,7 +48,7 @@
         "drizzle-kit": "^0.26.2",
         "husky": "^9.1.6",
         "is-ci": "^3.0.1",
-        "npm-run-all2": "^6.2.6",
+        "npm-run-all2": "^7.0.1",
         "rimraf": "^6.0.1",
         "typescript": "~5.4.5"
     },
