@@ -32,8 +32,8 @@
         "colorette": "^2.0.20",
         "cron": "^3.2.1",
         "discord.js": "^14.16.3",
-        "drizzle-orm": "^0.36.3",
-        "hono": "^4.6.10",
+        "drizzle-orm": "^0.36.4",
+        "hono": "^4.6.11",
         "ky": "^1.7.2",
         "pg": "^8.13.1",
         "zod": "^3.23.8",
@@ -41,16 +41,16 @@
     },
     "devDependencies": {
         "@biomejs/biome": "1.9.4",
-        "@commitlint/cli": "^19.5.0",
-        "@commitlint/config-conventional": "^19.5.0",
-        "@types/node": "^22.9.0",
+        "@commitlint/cli": "^19.6.0",
+        "@commitlint/config-conventional": "^19.6.0",
+        "@types/node": "^22.9.3",
         "@types/pg": "^8.11.10",
         "drizzle-kit": "^0.28.1",
-        "husky": "^9.1.6",
+        "husky": "^9.1.7",
         "is-ci": "^3.0.1",
         "npm-run-all2": "^7.0.1",
         "rimraf": "^6.0.1",
         "typescript": "~5.4.5"
     },
-    "packageManager": "yarn@4.5.1"
+    "packageManager": "yarn@4.5.2"
 }
