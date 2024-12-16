@@ -35,9 +35,9 @@ app.post("/", async (c) => {
     }
 
     if ("component" in parsed.data) {
-        const { id, name } = body.data.component;
+        const { id, name } = parsed.data.component;
         const { old_status, new_status, component_type } =
-            body.data.component_update;
+            parsed.data.component_update;
 
         logger.info(
             `DiscordComponent[${id}] The ${name} ${component_type} updated from ${old_status} to ${new_status}`,
