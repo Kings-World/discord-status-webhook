@@ -1,7 +1,7 @@
 import { serve } from "@hono/node-server";
 import { type Context, Hono } from "hono";
 import { logger as loggerMiddleware } from "hono/logger";
-import type { StatusCode } from "hono/utils/http-status";
+import type { ContentfulStatusCode } from "hono/utils/http-status";
 import { z } from "zod";
 import { fromZodError } from "zod-validation-error";
 import { logger } from "../constants.js";
@@ -67,7 +67,7 @@ export function startServer() {
     });
 }
 
-function out<C extends Context, S extends StatusCode>(
+function out<C extends Context, S extends ContentfulStatusCode>(
     c: C,
     success: boolean,
     message: string,
