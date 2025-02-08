@@ -1,5 +1,5 @@
 {
-    "id": "c710afca-070d-46b7-9f5f-efab9e6fcce3",
+    "id": "756df1c8-f52d-49dc-aaa0-ddd688f612e9",
     "prevId": "00000000-0000-0000-0000-000000000000",
     "version": "7",
     "dialect": "postgresql",
@@ -51,12 +51,16 @@
             "foreignKeys": {},
             "compositePrimaryKeys": {},
             "uniqueConstraints": {},
-            "checkConstraints": {}
+            "policies": {},
+            "checkConstraints": {},
+            "isRLSEnabled": false
         }
     },
     "enums": {},
     "schemas": {},
     "sequences": {},
+    "roles": {},
+    "policies": {},
     "views": {},
     "_meta": {
         "columns": {},

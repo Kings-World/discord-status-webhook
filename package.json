@@ -35,7 +35,7 @@
         "drizzle-orm": "^0.39.2",
         "hono": "^4.7.0",
         "ky": "^1.7.4",
-        "pg": "^8.13.1",
+        "postgres": "^3.4.5",
         "zod": "^3.24.1",
         "zod-validation-error": "^3.4.0"
     },
@@ -44,7 +44,6 @@
         "@commitlint/cli": "^19.7.1",
         "@commitlint/config-conventional": "^19.7.1",
         "@types/node": "^22.13.1",
-        "@types/pg": "^8.11.11",
         "drizzle-kit": "^0.30.4",
         "husky": "^9.1.7",
         "is-ci": "^4.1.0",
