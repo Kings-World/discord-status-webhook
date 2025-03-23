@@ -24,7 +24,7 @@
         "postinstall": "is-ci || husky"
     },
     "dependencies": {
-        "@hono/node-server": "^1.13.8",
+        "@hono/node-server": "^1.14.0",
         "@sapphire/framework": "^5.3.2",
         "@sapphire/plugin-logger": "^4.0.2",
         "@sapphire/utilities": "^3.18.2",
@@ -32,8 +32,8 @@
         "colorette": "^2.0.20",
         "cron": "^4.1.0",
         "discord.js": "^14.18.0",
-        "drizzle-orm": "^0.40.0",
-        "hono": "^4.7.4",
+        "drizzle-orm": "^0.41.0",
+        "hono": "^4.7.5",
         "ky": "^1.7.5",
         "postgres": "^3.4.5",
         "zod": "^3.24.2",
@@ -43,7 +43,7 @@
         "@biomejs/biome": "1.9.4",
         "@commitlint/cli": "^19.8.0",
         "@commitlint/config-conventional": "^19.8.0",
-        "@types/node": "^22.13.10",
+        "@types/node": "^22.13.11",
         "drizzle-kit": "^0.30.5",
         "husky": "^9.1.7",
         "is-ci": "^4.1.0",
