@@ -750,9 +750,9 @@ __metadata:
   linkType: hard
 
 "@petamoriken/float16@npm:^3.8.7":
-  version: 3.9.1
-  resolution: "@petamoriken/float16@npm:3.9.1"
-  checksum: 10/d2827934e9ffa4da347c76039c3ed9ec34c1fd5da5473507934d13c7ae65ef20982b6995af9d6fc3f9c66494d65da1d070bcf8fac5d6657fb6bfb9b49a3f619f
+  version: 3.9.2
+  resolution: "@petamoriken/float16@npm:3.9.2"
+  checksum: 10/85823150a13289f09df7c286dd45481acedbd53244d8576f897722a3bc0a83bf1b30bd6ed4b626eaa0c6092b95d75933d68443653f0d4f0bec2eacfb224c5335
   languageName: node
   linkType: hard
 
@@ -785,9 +785,9 @@ __metadata:
   linkType: hard
 
 "@sapphire/duration@npm:^1.1.4":
-  version: 1.1.4
-  resolution: "@sapphire/duration@npm:1.1.4"
-  checksum: 10/cbc2dff3bcaa56b06347a4dcf4be4417e710e146d22c9034124c2ecb9c8937ee3bf33b7e6b659b7f743304f4843b36ae36d83f62e1439d9fc82bafc0f5958d1c
+  version: 1.2.0
+  resolution: "@sapphire/duration@npm:1.2.0"
+  checksum: 10/70fdb4f699ff5ecdccb25ba72a5917956195e9d377dd2dc7affaa0ec1e1145d1f5c3f79e595ac0f6edcec2a78fdc14acc5fdc591b1559f17df69532eb428967b
   languageName: node
   linkType: hard
 
@@ -935,11 +935,11 @@ __metadata:
   linkType: hard
 
 "@types/ws@npm:^8.5.10":
-  version: 8.5.14
-  resolution: "@types/ws@npm:8.5.14"
+  version: 8.18.1
+  resolution: "@types/ws@npm:8.18.1"
   dependencies:
     "@types/node": "npm:*"
-  checksum: 10/956692dd47d5fe042780f61a6310d47203d07622aa185ef2eee7e849f9e7d1e5c190b0d8db8c3ab204a8829e3603b6c6bcab9024cd11dffdd5ffc0df9fd83f2d
+  checksum: 10/1ce05e3174dcacf28dae0e9b854ef1c9a12da44c7ed73617ab6897c5cbe4fccbb155a20be5508ae9a7dde2f83bd80f5cf3baa386b934fc4b40889ec963e94f3a
   languageName: node
   linkType: hard
 
@@ -1056,9 +1056,9 @@ __metadata:
   linkType: hard
 
 "ci-info@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "ci-info@npm:4.1.0"
-  checksum: 10/546628efd04e37da3182a58b6995a3313deb86ec7c8112e22ffb644317a61296b89bbfa128219e5bfcce43d9613a434ed89907ed8e752db947f7291e0405125f
+  version: 4.2.0
+  resolution: "ci-info@npm:4.2.0"
+  checksum: 10/928d8457f3476ffc4a66dec93b9cdf1944d5e60dba69fbd6a0fc95b652386f6ef64857f6e32372533210ef6d8954634af2c7693d7c07778ee015f3629a5e0dd9
   languageName: node
   linkType: hard
 
@@ -1651,8 +1651,8 @@ __metadata:
   linkType: hard
 
 "gel@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "gel@npm:2.0.0"
+  version: 2.0.1
+  resolution: "gel@npm:2.0.1"
   dependencies:
     "@petamoriken/float16": "npm:^3.8.7"
     debug: "npm:^4.3.4"
@@ -1662,7 +1662,7 @@ __metadata:
     which: "npm:^4.0.0"
   bin:
     gel: dist/cli.mjs
-  checksum: 10/bfa1e0e04736113038fad37b706e7e8988b516beac9f9422f31962f5d4d06bb7d9d3365efd319f31a78f0927bebe387e6d10bef0c499a25f8c4fc50b7fc1de19
+  checksum: 10/d5b575f9c571bb7c9e90a1e96c3178d56a42282265afd543eab27c9abe6a6d4b4ddb27174a6ad8f3f30ab0b8ee55b27dba87c81c29ce3e3f01918004aec5500e
   languageName: node
   linkType: hard
 
@@ -1880,9 +1880,9 @@ __metadata:
   linkType: hard
 
 "ky@npm:^1.7.5":
-  version: 1.7.5
-  resolution: "ky@npm:1.7.5"
-  checksum: 10/aabb9688ca9a1839c8c0a9e7ff12a5d12f6905fb6a9892ac3ff9be6a9f16c5890ec02f00aec1a64cf548f795a5eaa7154f3e3e44ffa81f1cf5d9a90be8b6a9b3
+  version: 1.8.0
+  resolution: "ky@npm:1.8.0"
+  checksum: 10/1917599dba93a4cca9ad86385d7454b690ed81d48a9782309a566401b36e3ac24db9ed4ad429eaba541008e816617407acb40fd9cc4b92f6eaea03b9b90c4d4e
   languageName: node
   linkType: hard
 
@@ -1973,16 +1973,16 @@ __metadata:
   linkType: hard
 
 "lru-cache@npm:^11.0.0":
-  version: 11.0.2
-  resolution: "lru-cache@npm:11.0.2"
-  checksum: 10/25fcb66e9d91eaf17227c6abfe526a7bed5903de74f93bfde380eb8a13410c5e8d3f14fe447293f3f322a7493adf6f9f015c6f1df7a235ff24ec30f366e1c058
+  version: 11.1.0
+  resolution: "lru-cache@npm:11.1.0"
+  checksum: 10/5011011675ca98428902de774d0963b68c3a193cd959347cb63b781dad4228924124afab82159fd7b8b4db18285d9aff462b877b8f6efd2b41604f806c1d9db4
   languageName: node
   linkType: hard
 
 "luxon@npm:~3.6.0":
-  version: 3.6.0
-  resolution: "luxon@npm:3.6.0"
-  checksum: 10/1546a51dbb8e3c888311b50dcee2550778a078952dbc1aec015fa64b069b8f47a589232e8ce1324aafe1b6c913eeb612ab91dec5d05a71de7fce03656800facb
+  version: 3.6.1
+  resolution: "luxon@npm:3.6.1"
+  checksum: 10/35aad425607708c87af110a52c949190bc35b987770079ec8007ef2365cd29639413db3360d2883777aa01cb3ca5bdb37f42ee3e8e5a0dd277fe22e90cc8a786
   languageName: node
   linkType: hard
 
@@ -2503,9 +2503,9 @@ __metadata:
   linkType: hard
 
 "yocto-queue@npm:^1.0.0":
-  version: 1.1.1
-  resolution: "yocto-queue@npm:1.1.1"
-  checksum: 10/f2e05b767ed3141e6372a80af9caa4715d60969227f38b1a4370d60bffe153c9c5b33a862905609afc9b375ec57cd40999810d20e5e10229a204e8bde7ef255c
+  version: 1.2.1
+  resolution: "yocto-queue@npm:1.2.1"
+  checksum: 10/0843d6c2c0558e5c06e98edf9c17942f25c769e21b519303a5c2adefd5b738c9b2054204dc856ac0cd9d134b1bc27d928ce84fd23c9e2423b7e013d5a6f50577
   languageName: node
   linkType: hard
 
