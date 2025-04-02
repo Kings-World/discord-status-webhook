@@ -1,6 +1,4 @@
-import "dotenv/config";
-import "@skyra/env-utilities";
-
+import "@​skyra/env-utilities/setup";
 import { startCronJob } from "./core/cron.js";
 import { startServer } from "./core/server.js";
 
