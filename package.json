@@ -34,7 +34,7 @@
         "discord.js": "^14.18.0",
         "drizzle-orm": "^0.41.0",
         "hono": "^4.7.5",
-        "ky": "^1.7.5",
+        "ky": "^1.8.0",
         "postgres": "^3.4.5",
         "zod": "^3.24.2",
         "zod-validation-error": "^3.4.0"
@@ -43,7 +43,7 @@
         "@biomejs/biome": "1.9.4",
         "@commitlint/cli": "^19.8.0",
         "@commitlint/config-conventional": "^19.8.0",
-        "@types/node": "^22.13.14",
+        "@types/node": "^22.14.0",
         "drizzle-kit": "^0.30.6",
         "husky": "^9.1.7",
         "is-ci": "^4.1.0",
