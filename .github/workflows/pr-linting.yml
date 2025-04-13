@@ -1,0 +1,31 @@
+name: PR Linting
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - reopened
+      - synchronize
+
+jobs:
+  title:
+    name: Title Validation
+    runs-on: blacksmith-2vcpu-ubuntu-2204
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: useblacksmith/setup-node@v5
+        with:
+          node-version: 22
+          cache: yarn
+
+      - name: Install Dependencies
+        run: yarn --immutable
+
+      - name: Run Validation
+        run: echo "$PR_TITLE" | yarn commitlint
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
