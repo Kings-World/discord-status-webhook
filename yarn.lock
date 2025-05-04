@@ -305,9 +305,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discordjs/builders@npm:^1.10.1, @discordjs/builders@npm:^1.11.1":
-  version: 1.11.1
-  resolution: "@discordjs/builders@npm:1.11.1"
+"@discordjs/builders@npm:^1.10.1, @discordjs/builders@npm:^1.11.2":
+  version: 1.11.2
+  resolution: "@discordjs/builders@npm:1.11.2"
   dependencies:
     "@discordjs/formatters": "npm:^0.6.1"
     "@discordjs/util": "npm:^1.1.1"
@@ -316,7 +316,7 @@ __metadata:
     fast-deep-equal: "npm:^3.1.3"
     ts-mixer: "npm:^6.0.4"
     tslib: "npm:^2.6.3"
-  checksum: 10/bb20b2fb2c700af4bbb20862227cc83a9b58fa7fd2738187b704432e0fcf926eaf5dbbaee2fb74849843669aecc38b5a1ecbda1ec4028bf18cf82a7a6b8e45ac
+  checksum: 10/b3e76c12c170d6719c4ba3c755e81a0a58d93e9ed260fcd435990411c355c06f7984f1170d4332f544db09ee8a2bcea3421f63c46e1f84f8e62eee757dfa2659
   languageName: node
   linkType: hard
 
@@ -932,7 +932,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.15.2":
+"@types/node@npm:*, @types/node@npm:^22.15.3":
   version: 22.15.3
   resolution: "@types/node@npm:22.15.3"
   dependencies:
@@ -1241,13 +1241,13 @@ __metadata:
     "@sapphire/plugin-logger": "npm:^4.0.2"
     "@sapphire/utilities": "npm:^3.18.2"
     "@skyra/env-utilities": "npm:^2.0.0"
-    "@types/node": "npm:^22.15.2"
+    "@types/node": "npm:^22.15.3"
     colorette: "npm:^2.0.20"
     cron: "npm:^4.3.0"
-    discord.js: "npm:^14.19.1"
-    drizzle-kit: "npm:^0.31.0"
+    discord.js: "npm:^14.19.3"
+    drizzle-kit: "npm:^0.31.1"
     drizzle-orm: "npm:^0.43.1"
-    hono: "npm:^4.7.7"
+    hono: "npm:^4.7.8"
     husky: "npm:^9.1.7"
     is-ci: "npm:^4.1.0"
     ky: "npm:^1.8.1"
@@ -1260,11 +1260,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"discord.js@npm:^14.19.1":
-  version: 14.19.2
-  resolution: "discord.js@npm:14.19.2"
+"discord.js@npm:^14.19.3":
+  version: 14.19.3
+  resolution: "discord.js@npm:14.19.3"
   dependencies:
-    "@discordjs/builders": "npm:^1.11.1"
+    "@discordjs/builders": "npm:^1.11.2"
     "@discordjs/collection": "npm:1.5.3"
     "@discordjs/formatters": "npm:^0.6.1"
     "@discordjs/rest": "npm:^2.5.0"
@@ -1277,7 +1277,7 @@ __metadata:
     magic-bytes.js: "npm:^1.10.0"
     tslib: "npm:^2.6.3"
     undici: "npm:6.21.1"
-  checksum: 10/a000060e14f7f1aa3b4a0410948805f1684f6ebc1159bfec59069f9f59ebd301dc3e7ac7a7f85d9985e9ce9e807796c0b433b71c328c12902acee61363393fc4
+  checksum: 10/c9fd9deb4df8e8797da46d2d75c9eeb02fd55d99043b70c8846996b6f262be743cf6cc52033ed5890a2ceac53537ce9048d3abbc8a358707d5122df4fef874eb
   languageName: node
   linkType: hard
 
@@ -1306,9 +1306,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-kit@npm:^0.31.0":
-  version: 0.31.0
-  resolution: "drizzle-kit@npm:0.31.0"
+"drizzle-kit@npm:^0.31.1":
+  version: 0.31.1
+  resolution: "drizzle-kit@npm:0.31.1"
   dependencies:
     "@drizzle-team/brocli": "npm:^0.10.2"
     "@esbuild-kit/esm-loader": "npm:^2.5.5"
@@ -1316,7 +1316,7 @@ __metadata:
     esbuild-register: "npm:^3.5.0"
   bin:
     drizzle-kit: bin.cjs
-  checksum: 10/756a14829368ebbfc1e918c7dd527fb37cefc30efccfbf371b22a31ec85fe84c8027d87b36a56dfac309752d28be9b3ab6c0e084f6166a8dd1919e74e645efed
+  checksum: 10/3e38d34e808cf019530a06de02eb4be241edf580cd9b79d10efb0173bc0e9234af39e2bf53c896ac1db6477e76fe709dfdee2bf877d12e90f4dec1535ca0abe7
   languageName: node
   linkType: hard
 
@@ -1719,7 +1719,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hono@npm:^4.7.7":
+"hono@npm:^4.7.8":
   version: 4.7.8
   resolution: "hono@npm:4.7.8"
   checksum: 10/6a574a786f88fb5bba4a1fb1be4b6e0d31225a2f91c214f1d4afa2d491e1e4feb05a01bb4624218bc9d525a6a998f198d1ccead6abaf1537b71bd9ec80e22e4d
