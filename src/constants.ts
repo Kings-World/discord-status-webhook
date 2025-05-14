@@ -11,7 +11,7 @@ export const incidentsJsonUrl =
 export const logger = new Logger({ level: LogLevel.Debug });
 
 export const statusData: Record<
-    z.infer<typeof incidentStatusEnum> | string,
+    z.infer<typeof incidentStatusEnum>,
     [color: number, emoji: string]
 > = {
     identified: [0xf15832, envParseString("IDENTIFIED_STATUS_EMOJI")], // hsl(12, 87.2%, 57.1%) - red
