@@ -54,7 +54,7 @@ export const incidentSchema = z.object({
     incident_updates: z.array(
         z.object({
             id: z.string(),
-            status: z.string(),
+            status: incidentStatusEnum,
             body: z.string(),
             incident_id: z.string(),
             created_at: z.coerce.date(),
