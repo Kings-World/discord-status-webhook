@@ -111,7 +111,7 @@ export const componentUpdateWebhookSchema = baseWebhookSchema.extend({
     }),
 });
 
-// https://srhpyqt94yxb.statuspage.io/api/v2/incidents.json
+// https://discordstatus.com/api/v2/incidents.json
 export const incidentsRequestSchema = z.object({
     page: z.object({
         id: z.string(),

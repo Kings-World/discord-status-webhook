@@ -6,7 +6,7 @@ import type { z } from "zod";
 import type { incidentStatusEnum } from "./zod.js";
 
 export const incidentsJsonUrl =
-    "https://srhpyqt94yxb.statuspage.io/api/v2/incidents.json";
+    "https://discordstatus.com/api/v2/incidents.json";
 
 export const logger = new Logger({ level: LogLevel.Debug });
 
