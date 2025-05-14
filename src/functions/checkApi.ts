@@ -17,7 +17,7 @@ export async function checkApi() {
             return;
         }
 
-        for (const incident of parsed.data.incidents.slice(0, 5).reverse()) {
+        for (const incident of parsed.data.incidents.toReversed()) {
             await processDiscordIncident(incident);
         }
     } catch (error) {
