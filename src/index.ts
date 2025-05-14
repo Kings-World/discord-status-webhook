@@ -1,4 +1,4 @@
-import "@​skyra/env-utilities/setup";
+import "@skyra/env-utilities/setup";
 import { startCronJob } from "./core/cron.js";
 import { startServer } from "./core/server.js";
 
