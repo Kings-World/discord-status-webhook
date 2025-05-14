@@ -3,11 +3,5 @@
     "extends": [
         "local>Kings-World/.github:renovate-config",
         "customManagers:biomeVersions"
-    ],
-    "packageRules": [
-        {
-            "enabled": false,
-            "matchPackageNames": ["/typescript/"]
-        }
     ]
 }
