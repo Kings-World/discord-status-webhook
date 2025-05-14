@@ -20,8 +20,7 @@
         "db:pull": "drizzle-kit pull",
         "db:check": "drizzle-kit check",
         "db:up": "drizzle-kit up",
-        "db:studio": "drizzle-kit studio",
-        "postinstall": "is-ci || husky"
+        "db:studio": "drizzle-kit studio"
     },
     "dependencies": {
         "@hono/node-server": "^1.14.1",
@@ -45,8 +44,6 @@
         "@commitlint/config-conventional": "^19.8.1",
         "@types/node": "^22.15.17",
         "drizzle-kit": "^0.31.1",
-        "husky": "^9.1.7",
-        "is-ci": "^4.1.0",
         "npm-run-all2": "^8.0.1",
         "rimraf": "^6.0.1",
         "typescript": "^5.8.3"
