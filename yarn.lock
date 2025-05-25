@@ -740,12 +740,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hono/node-server@npm:^1.14.1":
-  version: 1.14.1
-  resolution: "@hono/node-server@npm:1.14.1"
+"@hono/node-server@npm:^1.14.2":
+  version: 1.14.2
+  resolution: "@hono/node-server@npm:1.14.2"
   peerDependencies:
     hono: ^4
-  checksum: 10/aee73a9b56f896f22de0cb073a00e948e85fd0c2347d17074836f2d8c018ffe3afc1ca61c9801046aa895b1a8fd3db36b6f1c1e3c24b1510fdf4c7f50ff58141
+  checksum: 10/5589136cd7b60624272b191652066a3bc3ee665a77f480a5dfe4d934e741714b79fb936c9a0569e2ce32f838f0770e19d2350defc0707b91ecb92f0a0a87a0af
   languageName: node
   linkType: hard
 
@@ -906,13 +906,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@skyra/env-utilities@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@skyra/env-utilities@npm:2.0.0"
+"@skyra/env-utilities@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@skyra/env-utilities@npm:2.0.1"
   dependencies:
-    dotenv: "npm:^16.4.7"
-    dotenv-expand: "npm:^12.0.1"
-  checksum: 10/bd52a4516db90ae7feaa9802330570ec510f51ed14ce8d68bcfd8ae7de071f1f7ec6d9da96bb153421f3eb0d4f079c7550afcaedeb189684cae2cca3404d1a85
+    dotenv: "npm:^16.5.0"
+    dotenv-expand: "npm:^12.0.2"
+  checksum: 10/1575fc2cf12a17fc835dc8b6437176df58f91d78cddd7387c76917f49378830003dbaba04324c3689927ec2d9a71c1982e761aa2e1c9cbd14f1fde180c7a215c
   languageName: node
   linkType: hard
 
@@ -932,12 +932,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.15.18":
-  version: 22.15.18
-  resolution: "@types/node@npm:22.15.18"
+"@types/node@npm:*, @types/node@npm:^22.15.21":
+  version: 22.15.21
+  resolution: "@types/node@npm:22.15.21"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/89c8c638beade806753b6fb2f25ed45b0e06f9f7375422137da5752be5c29fa9c75932b942fd55ae7de2b4288e8496912af3e029df45cc93735ac5eb49ece01e
+  checksum: 10/cb4189587cca445bfb8166c0ed39f9344d743f37f3da892f2999a99bbabda45dc773237e61ecb7d1dc83dd95718cb1b5715b0be5dd7953565b19019e36a7cf39
   languageName: node
   linkType: hard
 
@@ -1222,12 +1222,12 @@ __metadata:
     "@biomejs/biome": "npm:1.9.4"
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
-    "@hono/node-server": "npm:^1.14.1"
+    "@hono/node-server": "npm:^1.14.2"
     "@sapphire/framework": "npm:^5.3.5"
     "@sapphire/plugin-logger": "npm:^4.0.2"
     "@sapphire/utilities": "npm:^3.18.2"
-    "@skyra/env-utilities": "npm:^2.0.0"
-    "@types/node": "npm:^22.15.18"
+    "@skyra/env-utilities": "npm:^2.0.1"
+    "@types/node": "npm:^22.15.21"
     colorette: "npm:^2.0.20"
     cron: "npm:^4.3.0"
     discord.js: "npm:^14.19.3"
@@ -1235,11 +1235,11 @@ __metadata:
     drizzle-orm: "npm:^0.43.1"
     hono: "npm:^4.7.10"
     ky: "npm:^1.8.1"
-    npm-run-all2: "npm:^8.0.2"
-    postgres: "npm:^3.4.5"
+    npm-run-all2: "npm:^8.0.3"
+    postgres: "npm:^3.4.7"
     rimraf: "npm:^6.0.1"
     typescript: "npm:^5.8.3"
-    zod: "npm:^3.24.4"
+    zod: "npm:^3.25.28"
     zod-validation-error: "npm:^3.4.1"
   languageName: unknown
   linkType: soft
@@ -1274,7 +1274,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv-expand@npm:^12.0.1":
+"dotenv-expand@npm:^12.0.2":
   version: 12.0.2
   resolution: "dotenv-expand@npm:12.0.2"
   dependencies:
@@ -1283,7 +1283,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^16.4.5, dotenv@npm:^16.4.7":
+"dotenv@npm:^16.4.5, dotenv@npm:^16.5.0":
   version: 16.5.0
   resolution: "dotenv@npm:16.5.0"
   checksum: 10/e68a16834f1a41cc2dfb01563bc150668ad675e6cd09191211467b5c0806b6ecd6ec438e021aa8e01cd0e72d2b70ef4302bec7cc0fe15b6955f85230b62dc8a9
@@ -1970,7 +1970,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^10.0.0":
+"minimatch@npm:^10.0.0, minimatch@npm:^10.0.1":
   version: 10.0.1
   resolution: "minimatch@npm:10.0.1"
   dependencies:
@@ -2007,14 +2007,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-run-all2@npm:^8.0.2":
-  version: 8.0.2
-  resolution: "npm-run-all2@npm:8.0.2"
+"npm-run-all2@npm:^8.0.3":
+  version: 8.0.3
+  resolution: "npm-run-all2@npm:8.0.3"
   dependencies:
     ansi-styles: "npm:^6.2.1"
     cross-spawn: "npm:^7.0.6"
     memorystream: "npm:^0.3.1"
-    picomatch: "npm:^4.0.2"
+    minimatch: "npm:^10.0.1"
     pidtree: "npm:^0.6.0"
     read-package-json-fast: "npm:^4.0.0"
     shell-quote: "npm:^1.7.3"
@@ -2024,7 +2024,7 @@ __metadata:
     npm-run-all2: bin/npm-run-all/index.js
     run-p: bin/run-p/index.js
     run-s: bin/run-s/index.js
-  checksum: 10/71f83e26ed1522553e6191ab4ae630a78b13d66efcf0ba48fde82aac81506c1067de6cc53f8c7d87c4d2576a664e561eed033fdc56bf4ffa75a0648081ec9e52
+  checksum: 10/0d381ae684c41f78f607e2a55826e480bda1b8e489bbebf4aa3f89c393e12f97a4f5cbc94a9653702497b6ae1f45b8ec01dd5f70fa6b1881c0696bbb451f0fe5
   languageName: node
   linkType: hard
 
@@ -2105,13 +2105,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picomatch@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "picomatch@npm:4.0.2"
-  checksum: 10/ce617b8da36797d09c0baacb96ca8a44460452c89362d7cb8f70ca46b4158ba8bc3606912de7c818eb4a939f7f9015cef3c766ec8a0c6bfc725fdc078e39c717
-  languageName: node
-  linkType: hard
-
 "pidtree@npm:^0.6.0":
   version: 0.6.0
   resolution: "pidtree@npm:0.6.0"
@@ -2121,10 +2114,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postgres@npm:^3.4.5":
-  version: 3.4.5
-  resolution: "postgres@npm:3.4.5"
-  checksum: 10/b51341a8640bd63c42caf2a866c8b6bcac0d4cc1b85985f01eb3fd941eb7bf3fe5200bcf6983eaa1d42ae7555d85f4ff51d35916b5543b95aecfe98b76213611
+"postgres@npm:^3.4.7":
+  version: 3.4.7
+  resolution: "postgres@npm:3.4.7"
+  checksum: 10/ef5b43b137412c13d907da0d37e7d4141653365fd371ffa000e124076119fe14ef95a27b1469f2ed6fb006f855746fc65087f326a124fe320a2b1f3bbec397f4
   languageName: node
   linkType: hard
 
@@ -2468,9 +2461,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.24.4":
-  version: 3.24.4
-  resolution: "zod@npm:3.24.4"
-  checksum: 10/3d545792fa54bb27ee5dbc34a5709e81f603185fcc94c8204b5d95c20dc4c81d870ff9c51f3884a30ef05cdc601449f4c4df254ac4783f0827b1faed7c1cdb48
+"zod@npm:^3.25.28":
+  version: 3.25.28
+  resolution: "zod@npm:3.25.28"
+  checksum: 10/78c288d9cebf29a1a75fd03dbc1a16bd15eda5cdd0df552dfa5e6190e3e7aa4b2d6e8065f857fbd6d3e687951ca64a3f40d6aee9f5b2e39ce1812b695b47e5ce
   languageName: node
   linkType: hard
