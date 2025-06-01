@@ -740,12 +740,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hono/node-server@npm:^1.14.2":
-  version: 1.14.2
-  resolution: "@hono/node-server@npm:1.14.2"
+"@hono/node-server@npm:^1.14.3":
+  version: 1.14.3
+  resolution: "@hono/node-server@npm:1.14.3"
   peerDependencies:
     hono: ^4
-  checksum: 10/5589136cd7b60624272b191652066a3bc3ee665a77f480a5dfe4d934e741714b79fb936c9a0569e2ce32f838f0770e19d2350defc0707b91ecb92f0a0a87a0af
+  checksum: 10/ed8b7effa988382d8b2167e0e8fc43a3054b457c34cc2ebb04e60173d59d9da45ec30e64c2eb144a45e58a7b89d8b00db1be6bd1685661ee5863b47d7793d407
   languageName: node
   linkType: hard
 
@@ -932,12 +932,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.15.21":
-  version: 22.15.21
-  resolution: "@types/node@npm:22.15.21"
+"@types/node@npm:*, @types/node@npm:^22.15.29":
+  version: 22.15.29
+  resolution: "@types/node@npm:22.15.29"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/cb4189587cca445bfb8166c0ed39f9344d743f37f3da892f2999a99bbabda45dc773237e61ecb7d1dc83dd95718cb1b5715b0be5dd7953565b19019e36a7cf39
+  checksum: 10/3426790c5aa22df445213d7f37e57ea261cf3013030fe9b3025d87c302097799a9db3b848e2a9bdb07cab8ec6c7e9947ac770cf11e12e420148296b63d63e7db
   languageName: node
   linkType: hard
 
@@ -1168,13 +1168,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cron@npm:^4.3.0":
-  version: 4.3.0
-  resolution: "cron@npm:4.3.0"
+"cron@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "cron@npm:4.3.1"
   dependencies:
     "@types/luxon": "npm:~3.6.0"
     luxon: "npm:~3.6.0"
-  checksum: 10/202d9eef7da7c3cae548ef0e0fd20a0ee2f41ca36cca1486ba4ecd16783d02ebc6c116c84572aef0ce6c85c9f290eba9ff00e1a8eda2053123cf2c9d68a4702a
+  checksum: 10/d13d74825fe7a25c92bcab0e459b13d4d06a0ff5ecf6539dd4682db69dda669600b6f43263d763b66dbe90e66a116242f4a84b77439125300ddb85c8f1c7c4e1
   languageName: node
   linkType: hard
 
@@ -1222,24 +1222,24 @@ __metadata:
     "@biomejs/biome": "npm:1.9.4"
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
-    "@hono/node-server": "npm:^1.14.2"
+    "@hono/node-server": "npm:^1.14.3"
     "@sapphire/framework": "npm:^5.3.5"
     "@sapphire/plugin-logger": "npm:^4.0.2"
     "@sapphire/utilities": "npm:^3.18.2"
     "@skyra/env-utilities": "npm:^2.0.1"
-    "@types/node": "npm:^22.15.21"
+    "@types/node": "npm:^22.15.29"
     colorette: "npm:^2.0.20"
-    cron: "npm:^4.3.0"
+    cron: "npm:^4.3.1"
     discord.js: "npm:^14.19.3"
     drizzle-kit: "npm:^0.31.1"
-    drizzle-orm: "npm:^0.43.1"
-    hono: "npm:^4.7.10"
+    drizzle-orm: "npm:^0.44.1"
+    hono: "npm:^4.7.11"
     ky: "npm:^1.8.1"
-    npm-run-all2: "npm:^8.0.3"
+    npm-run-all2: "npm:^8.0.4"
     postgres: "npm:^3.4.7"
     rimraf: "npm:^6.0.1"
     typescript: "npm:^5.8.3"
-    zod: "npm:^3.25.28"
+    zod: "npm:^3.25.46"
     zod-validation-error: "npm:^3.4.1"
   languageName: unknown
   linkType: soft
@@ -1304,9 +1304,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-orm@npm:^0.43.1":
-  version: 0.43.1
-  resolution: "drizzle-orm@npm:0.43.1"
+"drizzle-orm@npm:^0.44.1":
+  version: 0.44.1
+  resolution: "drizzle-orm@npm:0.44.1"
   peerDependencies:
     "@aws-sdk/client-rds-data": ">=3"
     "@cloudflare/workers-types": ">=4"
@@ -1322,6 +1322,7 @@ __metadata:
     "@types/better-sqlite3": "*"
     "@types/pg": "*"
     "@types/sql.js": "*"
+    "@upstash/redis": ">=1.34.7"
     "@vercel/postgres": ">=0.8.0"
     "@xata.io/client": "*"
     better-sqlite3: ">=7"
@@ -1364,6 +1365,8 @@ __metadata:
       optional: true
     "@types/sql.js":
       optional: true
+    "@upstash/redis":
+      optional: true
     "@vercel/postgres":
       optional: true
     "@xata.io/client":
@@ -1392,7 +1395,7 @@ __metadata:
       optional: true
     sqlite3:
       optional: true
-  checksum: 10/ba33711157fd8a5893e6d180ff963dfc248c135e5c9b8fabb770e85b22c431ec561a8c156ff080c3ab1e1b19736ddfbc01b27c36a03efc7e9eba9201b24adcf7
+  checksum: 10/51fe208a54021c1f904535e80ffd563dd29d560eda464ab84c4e713e85901785b7a4b8dbbf7c3063bbf608536bcd260ffee9bc333db916eeaf07ee6418cd29e7
   languageName: node
   linkType: hard
 
@@ -1703,10 +1706,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hono@npm:^4.7.10":
-  version: 4.7.10
-  resolution: "hono@npm:4.7.10"
-  checksum: 10/467aff3f57338d70b992d1edf855510f84f378d6a43fa7b918ef2241aa7f84e2e38bbb538981f2683c8d9d08ada3635662137c1ff7f2b86099c6445f11d6a45f
+"hono@npm:^4.7.11":
+  version: 4.7.11
+  resolution: "hono@npm:4.7.11"
+  checksum: 10/a2eab50739a48a72ea142413953af51c3e5b6ba1432bc91cb3075baf448f08340260df92ea6eadd215ab3dfa1c3c01e263c41feb2850586b362fba0941d36dd0
   languageName: node
   linkType: hard
 
@@ -1970,7 +1973,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^10.0.0, minimatch@npm:^10.0.1":
+"minimatch@npm:^10.0.0":
   version: 10.0.1
   resolution: "minimatch@npm:10.0.1"
   dependencies:
@@ -2007,14 +2010,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-run-all2@npm:^8.0.3":
-  version: 8.0.3
-  resolution: "npm-run-all2@npm:8.0.3"
+"npm-run-all2@npm:^8.0.4":
+  version: 8.0.4
+  resolution: "npm-run-all2@npm:8.0.4"
   dependencies:
     ansi-styles: "npm:^6.2.1"
     cross-spawn: "npm:^7.0.6"
     memorystream: "npm:^0.3.1"
-    minimatch: "npm:^10.0.1"
+    picomatch: "npm:^4.0.2"
     pidtree: "npm:^0.6.0"
     read-package-json-fast: "npm:^4.0.0"
     shell-quote: "npm:^1.7.3"
@@ -2024,7 +2027,7 @@ __metadata:
     npm-run-all2: bin/npm-run-all/index.js
     run-p: bin/run-p/index.js
     run-s: bin/run-s/index.js
-  checksum: 10/0d381ae684c41f78f607e2a55826e480bda1b8e489bbebf4aa3f89c393e12f97a4f5cbc94a9653702497b6ae1f45b8ec01dd5f70fa6b1881c0696bbb451f0fe5
+  checksum: 10/6e485f0d71fdfcf5bd872e5bbb8440ea5816ebeed88e6e39ff6e758d76adefa516b3101ed7ddc8de117d61b499f176417c87b0c595394e15733738834ad6ef0a
   languageName: node
   linkType: hard
 
@@ -2102,6 +2105,13 @@ __metadata:
   version: 1.1.1
   resolution: "picocolors@npm:1.1.1"
   checksum: 10/e1cf46bf84886c79055fdfa9dcb3e4711ad259949e3565154b004b260cd356c5d54b31a1437ce9782624bf766272fe6b0154f5f0c744fb7af5d454d2b60db045
+  languageName: node
+  linkType: hard
+
+"picomatch@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "picomatch@npm:4.0.2"
+  checksum: 10/ce617b8da36797d09c0baacb96ca8a44460452c89362d7cb8f70ca46b4158ba8bc3606912de7c818eb4a939f7f9015cef3c766ec8a0c6bfc725fdc078e39c717
   languageName: node
   linkType: hard
 
@@ -2461,9 +2471,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.25.28":
-  version: 3.25.28
-  resolution: "zod@npm:3.25.28"
-  checksum: 10/78c288d9cebf29a1a75fd03dbc1a16bd15eda5cdd0df552dfa5e6190e3e7aa4b2d6e8065f857fbd6d3e687951ca64a3f40d6aee9f5b2e39ce1812b695b47e5ce
+"zod@npm:^3.25.46":
+  version: 3.25.46
+  resolution: "zod@npm:3.25.46"
+  checksum: 10/04ffe7d8806e4b3949886d176420610535b0acdafe2bd7e6d171e22e6e744c4d60388f74586454666bc758e0fc434e8ce1dfb8937b8f4394d71d651829aca3d4
   languageName: node
   linkType: hard
