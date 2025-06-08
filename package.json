@@ -23,30 +23,30 @@
         "db:studio": "drizzle-kit studio"
     },
     "dependencies": {
-        "@hono/node-server": "^1.14.3",
-        "@sapphire/framework": "^5.3.5",
+        "@hono/node-server": "^1.14.4",
+        "@sapphire/framework": "^5.3.6",
         "@sapphire/plugin-logger": "^4.0.2",
         "@sapphire/utilities": "^3.18.2",
         "@skyra/env-utilities": "^2.0.1",
         "colorette": "^2.0.20",
         "cron": "^4.3.1",
         "discord.js": "^14.19.3",
-        "drizzle-orm": "^0.44.1",
+        "drizzle-orm": "^0.44.2",
         "hono": "^4.7.11",
         "ky": "^1.8.1",
         "postgres": "^3.4.7",
-        "zod": "^3.25.46",
+        "zod": "^3.25.56",
         "zod-validation-error": "^3.4.1"
     },
     "devDependencies": {
         "@biomejs/biome": "1.9.4",
         "@commitlint/cli": "^19.8.1",
         "@commitlint/config-conventional": "^19.8.1",
-        "@types/node": "^22.15.29",
+        "@types/node": "^22.15.30",
         "drizzle-kit": "^0.31.1",
         "npm-run-all2": "^8.0.4",
         "rimraf": "^6.0.1",
         "typescript": "^5.8.3"
     },
-    "packageManager": "yarn@4.9.1"
+    "packageManager": "yarn@4.9.2"
 }
