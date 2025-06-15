@@ -932,12 +932,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.15.30":
-  version: 22.15.30
-  resolution: "@types/node@npm:22.15.30"
+"@types/node@npm:*, @types/node@npm:^22.15.31":
+  version: 22.15.31
+  resolution: "@types/node@npm:22.15.31"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/16d03f30df7851eea4f31d9a2470a53b24dc7d3909ed1782e2538e3aafe398451da17b83d6f730dfdcd0a843ccdbe841176ecfbde6bdb51963e8d11f58a10ade
+  checksum: 10/999da153fae4687c416421850ebd3c94be75e0dae27ccad192d9a073c7e74baade987d68fc9f082a825c4672bd8a26867636663baad0b9e851baf7b36fb9fdd9
   languageName: node
   linkType: hard
 
@@ -1227,7 +1227,7 @@ __metadata:
     "@sapphire/plugin-logger": "npm:^4.0.2"
     "@sapphire/utilities": "npm:^3.18.2"
     "@skyra/env-utilities": "npm:^2.0.1"
-    "@types/node": "npm:^22.15.30"
+    "@types/node": "npm:^22.15.31"
     colorette: "npm:^2.0.20"
     cron: "npm:^4.3.1"
     discord.js: "npm:^14.19.3"
@@ -1239,8 +1239,8 @@ __metadata:
     postgres: "npm:^3.4.7"
     rimraf: "npm:^6.0.1"
     typescript: "npm:^5.8.3"
-    zod: "npm:^3.25.56"
-    zod-validation-error: "npm:^3.4.1"
+    zod: "npm:^3.25.64"
+    zod-validation-error: "npm:^3.5.0"
   languageName: unknown
   linkType: soft
 
@@ -2462,18 +2462,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod-validation-error@npm:^3.4.1":
-  version: 3.4.1
-  resolution: "zod-validation-error@npm:3.4.1"
+"zod-validation-error@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "zod-validation-error@npm:3.5.0"
   peerDependencies:
-    zod: ^3.24.4
-  checksum: 10/4975aacc1a931acdbaa3eeaf92fc89a210c6fd14a260d17688ec6302ce478c268c008c61bcdeab51c76191ac627e580f319775a7862be7b9c54c94f2f7cb6ed2
+    zod: ^3.25.0
+  checksum: 10/ff9f8d2a5d349570abd5f07598179911b3cc1bbd0d1e83bdc926dc7e863fed3c39f85b8dbba6a8d4de37623dc494126fd7d2c28f81577c001e1838b9e098897b
   languageName: node
   linkType: hard
 
-"zod@npm:^3.25.56":
-  version: 3.25.56
-  resolution: "zod@npm:3.25.56"
-  checksum: 10/f2faf9f9bf1e1e487697caf09f65f6c67282e55e801a697eebde99063ca313fae3706d2ebb886bf2f48173cdcff76b3fa14968eea43d3cd47a79f7a0c7594f6a
+"zod@npm:^3.25.64":
+  version: 3.25.64
+  resolution: "zod@npm:3.25.64"
+  checksum: 10/5538573d880291c18ff93b92879effd1673943c78c7f957b190d0ebf456a2742d6acd510c955679a269570a2d076e7608dc6aa797f5ef8cfc162893abaf9c4db
   languageName: node
   linkType: hard
