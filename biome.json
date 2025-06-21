@@ -24,19 +24,7 @@
     "linter": {
         "enabled": true,
         "rules": {
-            "recommended": true,
-            "style": {
-                "noUnusedTemplateLiteral": {
-                    "level": "warn",
-                    "fix": "safe"
-                }
-            },
-            "correctness": {
-                "noUnusedImports": {
-                    "level": "warn",
-                    "fix": "safe"
-                }
-            }
+            "recommended": true
         }
     },
     "javascript": {
