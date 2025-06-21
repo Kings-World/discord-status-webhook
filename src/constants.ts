@@ -14,11 +14,11 @@ export const statusData: Record<
     z.infer<typeof incidentStatusEnum>,
     [color: number, emoji: string]
 > = {
-    identified: [0xf15832, envParseString("IDENTIFIED_STATUS_EMOJI")], // hsl(12, 87.2%, 57.1%) - red
-    investigating: [0xed9932, envParseString("INVESTIGATING_STATUS_EMOJI")], // hsl(33, 83.9%, 56.3%) - orange
-    monitoring: [0xf2ef42, envParseString("MONITORING_STATUS_EMOJI")], // hsl(59, 87.1%, 60.4%) - yellow
-    resolved: [0x43b582, envParseString("RESOLVED_STATUS_EMOJI")], // hsl(153, 46%, 48.6%) - green
-    postmortem: [0x43b582, envParseString("RESOLVED_STATUS_EMOJI")], // hsl(153, 46%, 48.6%) - green
+    identified: [0xf15832, envParseString("IDENTIFIED_STATUS_EMOJI")],
+    investigating: [0xed9932, envParseString("INVESTIGATING_STATUS_EMOJI")],
+    monitoring: [0xf2ef42, envParseString("MONITORING_STATUS_EMOJI")],
+    resolved: [0x43b582, envParseString("RESOLVED_STATUS_EMOJI")],
+    postmortem: [0x43b582, envParseString("RESOLVED_STATUS_EMOJI")],
 };
 
 export const webhook = envIsDefined("WEBHOOK_ID", "WEBHOOK_TOKEN")
