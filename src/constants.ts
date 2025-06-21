@@ -2,8 +2,7 @@ import { LogLevel } from "@sapphire/framework";
 import { Logger } from "@sapphire/plugin-logger";
 import { envIsDefined, envParseString } from "@skyra/env-utilities";
 import { WebhookClient } from "discord.js";
-import type { z } from "zod";
-import type { incidentStatusEnum } from "./zod.js";
+import type { IncidentStatusEnum } from "./zod.js";
 
 export const incidentsJsonUrl =
     "https://discordstatus.com/api/v2/incidents.json";
@@ -11,7 +10,7 @@ export const incidentsJsonUrl =
 export const logger = new Logger({ level: LogLevel.Debug });
 
 export const statusData: Record<
-    z.infer<typeof incidentStatusEnum>,
+    IncidentStatusEnum,
     [color: number, emoji: string]
 > = {
     identified: [0xf15832, envParseString("IDENTIFIED_STATUS_EMOJI")],

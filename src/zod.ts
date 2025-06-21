@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 
 // discord status incident status
 export const incidentStatusEnum = z.enum([
@@ -31,7 +31,7 @@ export const componentSchema = z.object({
     start_date: z.coerce.date().nullable(),
     group_id: z.string().nullable(),
     page_id: z.string(),
-    // not in component update schema (i dont think)
+    // not in component update schema (i don't think)
     group: z.boolean().optional(),
     only_show_if_degraded: z.boolean().optional(),
 });
@@ -48,7 +48,7 @@ export const incidentSchema = z.object({
     resolved_at: z.coerce.date().nullable(),
     // https://github.com/almostSouji/discord-status-webhook/blob/main/src/interfaces/StatusPage.ts#L45
     impact: incidentImpactEnum,
-    shortlink: z.string().url(),
+    shortlink: z.url(),
     started_at: z.coerce.date(),
     page_id: z.string(),
     incident_updates: z.array(
@@ -81,8 +81,8 @@ export const incidentSchema = z.object({
 // base schema for discord status webhook
 export const baseWebhookSchema = z.object({
     meta: z.object({
-        unsubscribe: z.string().url(),
-        documentation: z.string().url(),
+        unsubscribe: z.url(),
+        documentation: z.url(),
         generated_at: z.coerce.date(),
     }),
     page: z.object({
@@ -116,9 +116,12 @@ export const incidentsRequestSchema = z.object({
     page: z.object({
         id: z.string(),
         name: z.string(),
-        url: z.string().url(),
+        url: z.url(),
         time_zone: z.string(),
         updated_at: z.coerce.date(),
     }),
     incidents: z.array(incidentSchema),
 });
+
+export type IncidentSchema = z.infer<typeof incidentSchema>;
+export type IncidentStatusEnum = z.infer<typeof incidentStatusEnum>;

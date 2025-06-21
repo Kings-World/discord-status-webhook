@@ -35,8 +35,7 @@
         "hono": "^4.7.11",
         "ky": "^1.8.1",
         "postgres": "^3.4.7",
-        "zod": "^3.25.64",
-        "zod-validation-error": "^3.5.0"
+        "zod": "^3.25.67"
     },
     "devDependencies": {
         "@biomejs/biome": "1.9.4",

@@ -1,5 +1,5 @@
 import ky from "ky";
-import { fromZodError } from "zod-validation-error";
+import { prettifyError } from "zod/v4";
 import { incidentsJsonUrl, logger } from "../constants.js";
 import { incidentsRequestSchema } from "../zod.js";
 import { processDiscordIncident } from "./processIncident.js";
@@ -10,9 +10,8 @@ export async function checkApi() {
         const parsed = incidentsRequestSchema.safeParse(body);
 
         if (!parsed.success) {
-            const formatted = fromZodError(parsed.error);
             logger.error(
-                `Failed to parse request body with reason: ${formatted.message}`,
+                `Failed to parse request body with reason:\n${prettifyError(parsed.error)}`,
             );
             return;
         }

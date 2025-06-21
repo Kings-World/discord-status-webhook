@@ -2,8 +2,7 @@ import { serve } from "@hono/node-server";
 import { type Context, Hono } from "hono";
 import { logger as loggerMiddleware } from "hono/logger";
 import type { ContentfulStatusCode } from "hono/utils/http-status";
-import { z } from "zod";
-import { fromZodError } from "zod-validation-error";
+import { z } from "zod/v4";
 import { logger } from "../constants.js";
 import { processDiscordIncident } from "../functions/processIncident.js";
 import { componentUpdateWebhookSchema, incidentWebhookSchema } from "../zod.js";
@@ -29,8 +28,8 @@ app.post("/", async (c) => {
         .safeParse(body);
 
     if (!parsed.success) {
-        const reason = fromZodError(parsed.error);
-        logger.error(`Zod: Failed to parse the body with reason: ${reason}`);
+        const reason = z.prettifyError(parsed.error);
+        logger.error(`Zod: Failed to parse the body with reason:\n${reason}`);
         return out(c, false, reason.toString(), 422);
     }
 

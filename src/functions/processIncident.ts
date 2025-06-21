@@ -2,15 +2,12 @@ import { toTitleCase } from "@sapphire/utilities";
 import { EmbedBuilder, time } from "discord.js";
 import { eq } from "drizzle-orm";
 import { DateTime } from "luxon";
-import type { z } from "zod";
 import { logger, roleId, statusData, webhook } from "../constants.js";
 import { db } from "../db/drizzle.js";
 import { discordStatus } from "../db/schema.js";
-import type { incidentSchema } from "../zod.js";
+import type { IncidentSchema } from "../zod.js";
 
-type Incident = z.infer<typeof incidentSchema>;
-
-function createEmbed(incident: Incident) {
+function createEmbed(incident: IncidentSchema) {
     return new EmbedBuilder()
         .setTitle(incident.name)
         .setURL(incident.shortlink)
@@ -30,7 +27,7 @@ function createEmbed(incident: Incident) {
         );
 }
 
-async function createAndSendStatus(incident: Incident) {
+async function createAndSendStatus(incident: IncidentSchema) {
     if (!webhook) return;
     logger.info(
         `DiscordStatus[${incident.id}] Sending ${incident.name} (${incident.status}) to Discord`,
@@ -52,7 +49,7 @@ async function createAndSendStatus(incident: Incident) {
 
 async function updateStatus(
     status: typeof discordStatus.$inferSelect,
-    incident: Incident,
+    incident: IncidentSchema,
 ) {
     if (!webhook) return;
     logger.info(
@@ -72,7 +69,7 @@ async function updateStatus(
         .where(eq(discordStatus.incidentId, incident.id));
 }
 
-export async function processDiscordIncident(incident: Incident) {
+export async function processDiscordIncident(incident: IncidentSchema) {
     if (!webhook) return;
 
     const status = await db.query.discordStatus.findFirst({
