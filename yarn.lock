@@ -23,18 +23,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:2.0.6":
-  version: 2.0.6
-  resolution: "@biomejs/biome@npm:2.0.6"
+"@biomejs/biome@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@biomejs/biome@npm:2.1.1"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:2.0.6"
-    "@biomejs/cli-darwin-x64": "npm:2.0.6"
-    "@biomejs/cli-linux-arm64": "npm:2.0.6"
-    "@biomejs/cli-linux-arm64-musl": "npm:2.0.6"
-    "@biomejs/cli-linux-x64": "npm:2.0.6"
-    "@biomejs/cli-linux-x64-musl": "npm:2.0.6"
-    "@biomejs/cli-win32-arm64": "npm:2.0.6"
-    "@biomejs/cli-win32-x64": "npm:2.0.6"
+    "@biomejs/cli-darwin-arm64": "npm:2.1.1"
+    "@biomejs/cli-darwin-x64": "npm:2.1.1"
+    "@biomejs/cli-linux-arm64": "npm:2.1.1"
+    "@biomejs/cli-linux-arm64-musl": "npm:2.1.1"
+    "@biomejs/cli-linux-x64": "npm:2.1.1"
+    "@biomejs/cli-linux-x64-musl": "npm:2.1.1"
+    "@biomejs/cli-win32-arm64": "npm:2.1.1"
+    "@biomejs/cli-win32-x64": "npm:2.1.1"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -54,62 +54,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 10/38f356ae924f79c5908eb3d8bb33b51074f763cc3e23d31d299263413ac557bd8c55c67b2a11b0c6d161adcc9e58cc41f9a360720f801350e6151e9b9d19f6df
+  checksum: 10/f114f220d388b76c2c28f56e7477df6545e65c009af0d279d63ca30efa7eca1ffb67bb8ce8305b8d25dfb7176b8f1b71e650c34ef8bb09c805c7f9c36166b3a7
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:2.0.6":
-  version: 2.0.6
-  resolution: "@biomejs/cli-darwin-arm64@npm:2.0.6"
+"@biomejs/cli-darwin-arm64@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@biomejs/cli-darwin-arm64@npm:2.1.1"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:2.0.6":
-  version: 2.0.6
-  resolution: "@biomejs/cli-darwin-x64@npm:2.0.6"
+"@biomejs/cli-darwin-x64@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@biomejs/cli-darwin-x64@npm:2.1.1"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:2.0.6":
-  version: 2.0.6
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.0.6"
+"@biomejs/cli-linux-arm64-musl@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.1.1"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:2.0.6":
-  version: 2.0.6
-  resolution: "@biomejs/cli-linux-arm64@npm:2.0.6"
+"@biomejs/cli-linux-arm64@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@biomejs/cli-linux-arm64@npm:2.1.1"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:2.0.6":
-  version: 2.0.6
-  resolution: "@biomejs/cli-linux-x64-musl@npm:2.0.6"
+"@biomejs/cli-linux-x64-musl@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@biomejs/cli-linux-x64-musl@npm:2.1.1"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:2.0.6":
-  version: 2.0.6
-  resolution: "@biomejs/cli-linux-x64@npm:2.0.6"
+"@biomejs/cli-linux-x64@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@biomejs/cli-linux-x64@npm:2.1.1"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:2.0.6":
-  version: 2.0.6
-  resolution: "@biomejs/cli-win32-arm64@npm:2.0.6"
+"@biomejs/cli-win32-arm64@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@biomejs/cli-win32-arm64@npm:2.1.1"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:2.0.6":
-  version: 2.0.6
-  resolution: "@biomejs/cli-win32-x64@npm:2.0.6"
+"@biomejs/cli-win32-x64@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@biomejs/cli-win32-x64@npm:2.1.1"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -932,12 +932,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.16.0":
-  version: 22.16.0
-  resolution: "@types/node@npm:22.16.0"
+"@types/node@npm:*, @types/node@npm:^22.16.3":
+  version: 22.16.3
+  resolution: "@types/node@npm:22.16.3"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/26ebbbd24749caa4a692664290c53cdca63ec717ca250cd2babf3d3da796e9d3d0b6b9814d160693261b5e881796bf0f3c1887fef355b19e9a78fe27cd5e2ce2
+  checksum: 10/b71fe7abf242091e2f303b400b27f677c311b03a3125bf5532e06aff8a4cd41944bcc6f70a0666834e4352228607e676bc8082fa38d3739d3e1460a20d5c51d2
   languageName: node
   linkType: hard
 
@@ -1168,13 +1168,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cron@npm:^4.3.1":
-  version: 4.3.1
-  resolution: "cron@npm:4.3.1"
+"cron@npm:^4.3.2":
+  version: 4.3.2
+  resolution: "cron@npm:4.3.2"
   dependencies:
     "@types/luxon": "npm:~3.6.0"
-    luxon: "npm:~3.6.0"
-  checksum: 10/d13d74825fe7a25c92bcab0e459b13d4d06a0ff5ecf6539dd4682db69dda669600b6f43263d763b66dbe90e66a116242f4a84b77439125300ddb85c8f1c7c4e1
+    luxon: "npm:~3.7.0"
+  checksum: 10/e3212958e1bce95e6ed75ce61d5f84c13ff3cd2e5211efa7e0edd19fca2f1305bf48fed70808155119007c60d25d7ea9baf6ec87471a1ccdfbfc10775eaee1e6
   languageName: node
   linkType: hard
 
@@ -1219,7 +1219,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "discord-status-webhook@workspace:."
   dependencies:
-    "@biomejs/biome": "npm:2.0.6"
+    "@biomejs/biome": "npm:2.1.1"
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
     "@hono/node-server": "npm:^1.15.0"
@@ -1227,9 +1227,9 @@ __metadata:
     "@sapphire/plugin-logger": "npm:^4.1.0"
     "@sapphire/utilities": "npm:^3.18.2"
     "@skyra/env-utilities": "npm:^2.0.1"
-    "@types/node": "npm:^22.16.0"
+    "@types/node": "npm:^22.16.3"
     colorette: "npm:^2.0.20"
-    cron: "npm:^4.3.1"
+    cron: "npm:^4.3.2"
     discord.js: "npm:^14.21.0"
     drizzle-kit: "npm:^0.31.4"
     drizzle-orm: "npm:^0.44.2"
@@ -1239,7 +1239,7 @@ __metadata:
     postgres: "npm:^3.4.7"
     rimraf: "npm:^6.0.1"
     typescript: "npm:^5.8.3"
-    zod: "npm:^3.25.74"
+    zod: "npm:^3.25.76"
   languageName: unknown
   linkType: soft
 
@@ -1944,10 +1944,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:~3.6.0":
-  version: 3.6.1
-  resolution: "luxon@npm:3.6.1"
-  checksum: 10/35aad425607708c87af110a52c949190bc35b987770079ec8007ef2365cd29639413db3360d2883777aa01cb3ca5bdb37f42ee3e8e5a0dd277fe22e90cc8a786
+"luxon@npm:~3.7.0":
+  version: 3.7.1
+  resolution: "luxon@npm:3.7.1"
+  checksum: 10/3582460c0e2d4a88f6f0c11df30cac70c7e09a3d595b66b1d04543759a38afe6e5be28c601c4d81ee73d2e8602c65f825e2c8a8542392cc564624f2bf7d6301f
   languageName: node
   linkType: hard
 
@@ -2461,9 +2461,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.25.74":
-  version: 3.25.74
-  resolution: "zod@npm:3.25.74"
-  checksum: 10/2db3efb6ed77996c880486bf966419e3d611808a5972f7f7da599b01f7af55393facee5f6dba1be626a052985b8dbc3c151efc3ee62832067b788946aebd0364
+"zod@npm:^3.25.76":
+  version: 3.25.76
+  resolution: "zod@npm:3.25.76"
+  checksum: 10/f0c963ec40cd96858451d1690404d603d36507c1fc9682f2dae59ab38b578687d542708a7fdbf645f77926f78c9ed558f57c3d3aa226c285f798df0c4da16995
   languageName: node
   linkType: hard
