@@ -1,5 +1,5 @@
 import ky from "ky";
-import { prettifyError } from "zod/v4";
+import { prettifyError } from "zod";
 import { incidentsJsonUrl, logger } from "../constants.js";
 import { incidentsRequestSchema } from "../zod.js";
 import { processDiscordIncident } from "./processIncident.js";

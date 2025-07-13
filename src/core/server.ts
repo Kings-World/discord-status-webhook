@@ -2,7 +2,7 @@ import { serve } from "@hono/node-server";
 import { type Context, Hono } from "hono";
 import { logger as loggerMiddleware } from "hono/logger";
 import type { ContentfulStatusCode } from "hono/utils/http-status";
-import { z } from "zod/v4";
+import { z } from "zod";
 import { logger } from "../constants.js";
 import { processDiscordIncident } from "../functions/processIncident.js";
 import { componentUpdateWebhookSchema, incidentWebhookSchema } from "../zod.js";

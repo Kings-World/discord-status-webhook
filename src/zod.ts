@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import { z } from "zod";
 
 // discord status incident status
 export const incidentStatusEnum = z.enum([
