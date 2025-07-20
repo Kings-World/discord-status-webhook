@@ -740,12 +740,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hono/node-server@npm:^1.17.0":
-  version: 1.17.0
-  resolution: "@hono/node-server@npm:1.17.0"
+"@hono/node-server@npm:^1.17.1":
+  version: 1.17.1
+  resolution: "@hono/node-server@npm:1.17.1"
   peerDependencies:
     hono: ^4
-  checksum: 10/bc7d3c90ceb191ceec8981b6121ca1f50d11db3262f0c6b0372bc7d761edbd09d1c373aa0d6dd4fffafc16dfb6bd550bea9bca94715b30bc2064fa8e024c7c06
+  checksum: 10/1dab6c007d1aaaca77f911fa127782137b99cd3d41a14903b43647fb59336d42120359e93846343210630dec3ec06d446b965c97742704a698448f586699d0f6
   languageName: node
   linkType: hard
 
@@ -1222,7 +1222,7 @@ __metadata:
     "@biomejs/biome": "npm:2.1.2"
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
-    "@hono/node-server": "npm:^1.17.0"
+    "@hono/node-server": "npm:^1.17.1"
     "@sapphire/framework": "npm:^5.3.6"
     "@sapphire/plugin-logger": "npm:^4.1.0"
     "@sapphire/utilities": "npm:^3.18.2"
