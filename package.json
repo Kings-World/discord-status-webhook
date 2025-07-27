@@ -32,10 +32,10 @@
         "cron": "^4.3.2",
         "discord.js": "^14.21.0",
         "drizzle-orm": "^0.44.3",
-        "hono": "^4.8.5",
+        "hono": "^4.8.9",
         "ky": "^1.8.2",
         "postgres": "^3.4.7",
-        "zod": "^4.0.5"
+        "zod": "^4.0.10"
     },
     "devDependencies": {
         "@biomejs/biome": "2.1.2",

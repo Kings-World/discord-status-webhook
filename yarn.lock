@@ -1233,13 +1233,13 @@ __metadata:
     discord.js: "npm:^14.21.0"
     drizzle-kit: "npm:^0.31.4"
     drizzle-orm: "npm:^0.44.3"
-    hono: "npm:^4.8.5"
+    hono: "npm:^4.8.9"
     ky: "npm:^1.8.2"
     npm-run-all2: "npm:^8.0.4"
     postgres: "npm:^3.4.7"
     rimraf: "npm:^6.0.1"
     typescript: "npm:^5.8.3"
-    zod: "npm:^4.0.5"
+    zod: "npm:^4.0.10"
   languageName: unknown
   linkType: soft
 
@@ -1705,10 +1705,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hono@npm:^4.8.5":
-  version: 4.8.5
-  resolution: "hono@npm:4.8.5"
-  checksum: 10/225b12cd625bbd1fcd7d5d21d0daa840f1892c0425fc4d5b3b9c4500b359a0c167b9ae0d94598fbae480af533f8b61e4085e11865a960f9f624359aa279bd8c0
+"hono@npm:^4.8.9":
+  version: 4.8.9
+  resolution: "hono@npm:4.8.9"
+  checksum: 10/052df7ce99ef8026ffe40f777e9bea8dd0ca35c36c6ec90d5d674e1fe7e80a79143b40b68ef9255b3f3a2da0671b967dcd9b410429259c08095ff26401dff7fb
   languageName: node
   linkType: hard
 
@@ -2461,9 +2461,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^4.0.5":
-  version: 4.0.5
-  resolution: "zod@npm:4.0.5"
-  checksum: 10/f057f46e685e91ea280039ecda026c91facabdcbf869b3bae482ed13d34dce2efe9ee1f513fb1c8c0fde3b32e5904391f5ca015ec50b0924abf83a2b6f9dba65
+"zod@npm:^4.0.10":
+  version: 4.0.10
+  resolution: "zod@npm:4.0.10"
+  checksum: 10/65afdd6f69d636a542ecad3c468dd8f3a99264e7afdac4fdcd334fd312ee5199e509c1795c8e9115dc9cee41b068c9bec3fc466f96846ef172e9e9c3e5158ff6
   languageName: node
   linkType: hard
