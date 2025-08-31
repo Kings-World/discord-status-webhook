@@ -740,12 +740,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hono/node-server@npm:^1.19.0":
-  version: 1.19.0
-  resolution: "@hono/node-server@npm:1.19.0"
+"@hono/node-server@npm:^1.19.1":
+  version: 1.19.1
+  resolution: "@hono/node-server@npm:1.19.1"
   peerDependencies:
     hono: ^4
-  checksum: 10/0dcd978314e767fcb1d09f9de5ef4a1c209eedc75f2783035fce876ca836c870aa96f18b1f57e5356416bbc17de0b45cc68175bdb762610f255bbe84efecc1d7
+  checksum: 10/4ce72bc88aad341ed9949e389131ae34292a04d59c4d3fffff1e13d18d9ddf485e42af07e3473602b2742bc7b3e78296705871b33b1452cdfae95671dc90a70f
   languageName: node
   linkType: hard
 
@@ -932,12 +932,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.17.2":
-  version: 22.17.2
-  resolution: "@types/node@npm:22.17.2"
+"@types/node@npm:*, @types/node@npm:^22.18.0":
+  version: 22.18.0
+  resolution: "@types/node@npm:22.18.0"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/b830746c65e014d7d47102ab2f24ec74bdb60156b9b75af42e75d81375f211904347125c00543b5fd7119223b3157726bc9814619205571c0a0afd6ce3c43abb
+  checksum: 10/c4e4cdac52aae71e120fb4a02a08f774366e8bd6654de9376fb1113fb66cfa2706176b72f188069cdecdb40e5cdde2befa031dc720a0cc0b1e349af9e38492ad
   languageName: node
   linkType: hard
 
@@ -1222,24 +1222,24 @@ __metadata:
     "@biomejs/biome": "npm:2.2.2"
     "@commitlint/cli": "npm:^19.8.1"
     "@commitlint/config-conventional": "npm:^19.8.1"
-    "@hono/node-server": "npm:^1.19.0"
+    "@hono/node-server": "npm:^1.19.1"
     "@sapphire/framework": "npm:^5.3.6"
     "@sapphire/plugin-logger": "npm:^4.1.0"
     "@sapphire/utilities": "npm:^3.18.2"
     "@skyra/env-utilities": "npm:^2.0.1"
-    "@types/node": "npm:^22.17.2"
+    "@types/node": "npm:^22.18.0"
     colorette: "npm:^2.0.20"
     cron: "npm:^4.3.3"
     discord.js: "npm:^14.22.1"
     drizzle-kit: "npm:^0.31.4"
-    drizzle-orm: "npm:^0.44.4"
-    hono: "npm:^4.9.4"
-    ky: "npm:^1.9.0"
+    drizzle-orm: "npm:^0.44.5"
+    hono: "npm:^4.9.5"
+    ky: "npm:^1.9.1"
     npm-run-all2: "npm:^8.0.4"
     postgres: "npm:^3.4.7"
     rimraf: "npm:^6.0.1"
     typescript: "npm:^5.9.2"
-    zod: "npm:^4.1.1"
+    zod: "npm:^4.1.5"
   languageName: unknown
   linkType: soft
 
@@ -1303,9 +1303,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-orm@npm:^0.44.4":
-  version: 0.44.4
-  resolution: "drizzle-orm@npm:0.44.4"
+"drizzle-orm@npm:^0.44.5":
+  version: 0.44.5
+  resolution: "drizzle-orm@npm:0.44.5"
   peerDependencies:
     "@aws-sdk/client-rds-data": ">=3"
     "@cloudflare/workers-types": ">=4"
@@ -1394,7 +1394,7 @@ __metadata:
       optional: true
     sqlite3:
       optional: true
-  checksum: 10/87b30c9bbe0b80b9515805da01430a1460b1bb29499d2bad2e6268538fb94c97bb467f1b6bc7a76cea2d1080715e14f1b18d03d7dfc9200662e0499f92439bad
+  checksum: 10/1640824734d31ef765a7ea61d43298c535d0dc0ba42a2926a738a81a86922e13b387b4f7c45e0b40bf518ed5afb8fb2e23770da24883f13382fc8df62e247c75
   languageName: node
   linkType: hard
 
@@ -1705,10 +1705,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hono@npm:^4.9.4":
-  version: 4.9.4
-  resolution: "hono@npm:4.9.4"
-  checksum: 10/03c812eb579c343b1be4d1646defd774e3a193bfc239938a5931fde09823224070b8163a173d84d3a116d179ff9054deb2513a3b3252468909224496ca7fad19
+"hono@npm:^4.9.5":
+  version: 4.9.5
+  resolution: "hono@npm:4.9.5"
+  checksum: 10/bdd2db9560ca4734edfd6a3ada0d4d56d929b08e559cd9a14e1d1de30f9f15fe4a2e910bde4fa85269a9dfeafb937302a054bce2df8890ed4f7dcea512450b26
   languageName: node
   linkType: hard
 
@@ -1844,10 +1844,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ky@npm:^1.9.0":
-  version: 1.9.0
-  resolution: "ky@npm:1.9.0"
-  checksum: 10/4777162c719473dc472c124b193ae19d2ae291c160ede9ec39e1f0ca6e66dc9a9de4c2bad16542a74e9214dc56bbc60ecb8173980a3568de9d2b3dd3a7c7e363
+"ky@npm:^1.9.1":
+  version: 1.9.1
+  resolution: "ky@npm:1.9.1"
+  checksum: 10/61b4f3d4614d26583be2d48b8977bcaaa8332cb24fc02a0205c132fa92eefe9c0a424326aa6820c404465dd47303e299798339a0237e527d479f84aa5db13e6b
   languageName: node
   linkType: hard
 
@@ -2461,9 +2461,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "zod@npm:4.1.1"
-  checksum: 10/63e17d2f8d4e7a49331a62c2ad5b71705330139ddd677f2a055073b6a521a312e5dd2edc3e00953c90575075af098493c5c7b85429de0a952b8d6ab8c7e1b7e3
+"zod@npm:^4.1.5":
+  version: 4.1.5
+  resolution: "zod@npm:4.1.5"
+  checksum: 10/2ac6bef2d6647de6e673b6fa07ee392b71eb6fd6ccb2be8899d8d853084dd8b3992d4d2cf267eba6f8495a35803e2ec254509194fd0849ed0a822dea7ae4a765
   languageName: node
   linkType: hard
