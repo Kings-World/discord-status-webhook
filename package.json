@@ -30,18 +30,18 @@
         "@skyra/env-utilities": "^2.0.1",
         "colorette": "^2.0.20",
         "cron": "^4.3.3",
-        "discord.js": "^14.22.1",
+        "discord.js": "^14.23.2",
         "drizzle-orm": "^0.44.6",
-        "hono": "^4.9.9",
+        "hono": "^4.9.11",
         "ky": "^1.11.0",
         "postgres": "^3.4.7",
-        "zod": "^4.1.11"
+        "zod": "^4.1.12"
     },
     "devDependencies": {
         "@biomejs/biome": "2.2.5",
         "@commitlint/cli": "^20.1.0",
         "@commitlint/config-conventional": "^20.0.0",
-        "@types/node": "^22.18.8",
+        "@types/node": "^22.18.10",
         "drizzle-kit": "^0.31.5",
         "npm-run-all2": "^8.0.4",
         "rimraf": "^6.0.1",
