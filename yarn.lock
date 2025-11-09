@@ -23,18 +23,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:2.3.2":
-  version: 2.3.2
-  resolution: "@biomejs/biome@npm:2.3.2"
+"@biomejs/biome@npm:2.3.4":
+  version: 2.3.4
+  resolution: "@biomejs/biome@npm:2.3.4"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:2.3.2"
-    "@biomejs/cli-darwin-x64": "npm:2.3.2"
-    "@biomejs/cli-linux-arm64": "npm:2.3.2"
-    "@biomejs/cli-linux-arm64-musl": "npm:2.3.2"
-    "@biomejs/cli-linux-x64": "npm:2.3.2"
-    "@biomejs/cli-linux-x64-musl": "npm:2.3.2"
-    "@biomejs/cli-win32-arm64": "npm:2.3.2"
-    "@biomejs/cli-win32-x64": "npm:2.3.2"
+    "@biomejs/cli-darwin-arm64": "npm:2.3.4"
+    "@biomejs/cli-darwin-x64": "npm:2.3.4"
+    "@biomejs/cli-linux-arm64": "npm:2.3.4"
+    "@biomejs/cli-linux-arm64-musl": "npm:2.3.4"
+    "@biomejs/cli-linux-x64": "npm:2.3.4"
+    "@biomejs/cli-linux-x64-musl": "npm:2.3.4"
+    "@biomejs/cli-win32-arm64": "npm:2.3.4"
+    "@biomejs/cli-win32-x64": "npm:2.3.4"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -54,62 +54,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 10/028dec2b37383ed4fd031cafac7c9009376f272caab4edf1e95838bea126ce7520463e75b0d30d6f31562351d00df367af5d0d53a1dad650ef70df93762d6c2b
+  checksum: 10/b0b8f670236ce264b3d24111008b984e2ed4d68d8ec131412e801e744c935444c07281efa73ad27a244445142acca8b65ba86e73feb04418897d21735701b8ba
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:2.3.2":
-  version: 2.3.2
-  resolution: "@biomejs/cli-darwin-arm64@npm:2.3.2"
+"@biomejs/cli-darwin-arm64@npm:2.3.4":
+  version: 2.3.4
+  resolution: "@biomejs/cli-darwin-arm64@npm:2.3.4"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:2.3.2":
-  version: 2.3.2
-  resolution: "@biomejs/cli-darwin-x64@npm:2.3.2"
+"@biomejs/cli-darwin-x64@npm:2.3.4":
+  version: 2.3.4
+  resolution: "@biomejs/cli-darwin-x64@npm:2.3.4"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:2.3.2":
-  version: 2.3.2
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.3.2"
+"@biomejs/cli-linux-arm64-musl@npm:2.3.4":
+  version: 2.3.4
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.3.4"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:2.3.2":
-  version: 2.3.2
-  resolution: "@biomejs/cli-linux-arm64@npm:2.3.2"
+"@biomejs/cli-linux-arm64@npm:2.3.4":
+  version: 2.3.4
+  resolution: "@biomejs/cli-linux-arm64@npm:2.3.4"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:2.3.2":
-  version: 2.3.2
-  resolution: "@biomejs/cli-linux-x64-musl@npm:2.3.2"
+"@biomejs/cli-linux-x64-musl@npm:2.3.4":
+  version: 2.3.4
+  resolution: "@biomejs/cli-linux-x64-musl@npm:2.3.4"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:2.3.2":
-  version: 2.3.2
-  resolution: "@biomejs/cli-linux-x64@npm:2.3.2"
+"@biomejs/cli-linux-x64@npm:2.3.4":
+  version: 2.3.4
+  resolution: "@biomejs/cli-linux-x64@npm:2.3.4"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:2.3.2":
-  version: 2.3.2
-  resolution: "@biomejs/cli-win32-arm64@npm:2.3.2"
+"@biomejs/cli-win32-arm64@npm:2.3.4":
+  version: 2.3.4
+  resolution: "@biomejs/cli-win32-arm64@npm:2.3.4"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:2.3.2":
-  version: 2.3.2
-  resolution: "@biomejs/cli-win32-x64@npm:2.3.2"
+"@biomejs/cli-win32-x64@npm:2.3.4":
+  version: 2.3.4
+  resolution: "@biomejs/cli-win32-x64@npm:2.3.4"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -305,7 +305,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discordjs/builders@npm:^1.11.3, @discordjs/builders@npm:^1.13.0":
+"@discordjs/builders@npm:^1.13.0":
   version: 1.13.0
   resolution: "@discordjs/builders@npm:1.13.0"
   dependencies:
@@ -795,6 +795,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sapphire/discord-utilities@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@sapphire/discord-utilities@npm:4.0.0"
+  dependencies:
+    discord-api-types: "npm:^0.38.30"
+  checksum: 10/d7be32d3759913de54fff3be7bdca7f5ebd61ec39c3aef58c182ceba135ede542e2935db22ff7826d5f3552c5b663f6dc4d040b7b6fb46930618c0f527311900
+  languageName: node
+  linkType: hard
+
 "@sapphire/discord.js-utilities@npm:^7.3.3":
   version: 7.3.3
   resolution: "@sapphire/discord.js-utilities@npm:7.3.3"
@@ -814,29 +823,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/framework@npm:^5.3.7":
-  version: 5.3.7
-  resolution: "@sapphire/framework@npm:5.3.7"
+"@sapphire/framework@npm:^5.4.0":
+  version: 5.4.0
+  resolution: "@sapphire/framework@npm:5.4.0"
   dependencies:
-    "@discordjs/builders": "npm:^1.11.3"
-    "@sapphire/discord-utilities": "npm:^3.5.0"
+    "@discordjs/builders": "npm:^1.13.0"
+    "@sapphire/discord-utilities": "npm:^4.0.0"
     "@sapphire/discord.js-utilities": "npm:^7.3.3"
-    "@sapphire/lexure": "npm:^1.1.11"
+    "@sapphire/lexure": "npm:^1.1.12"
     "@sapphire/pieces": "npm:^4.4.1"
     "@sapphire/ratelimits": "npm:^2.4.11"
-    "@sapphire/result": "npm:^2.7.3"
+    "@sapphire/result": "npm:^2.8.0"
     "@sapphire/stopwatch": "npm:^1.5.4"
     "@sapphire/utilities": "npm:^3.18.2"
-  checksum: 10/64889fb1305fc9bc5ca2d1c1c5e6b4941952a38b39e5596084315d4cc4284a3d85071c4160056b4a304a1f29f07064e52f45b473bf816aa1e772909362f150cf
+  checksum: 10/50ed6f9bcf3a7d0d026c2f0e4436129a974a680f0eb2a8a49bf5eacb780dd3cb2bbd5bfd4c1dc9ff25b1d0d1a5fa1e8db75087654b78e3ce3d1ed252b2ace81f
   languageName: node
   linkType: hard
 
-"@sapphire/lexure@npm:^1.1.11":
-  version: 1.1.11
-  resolution: "@sapphire/lexure@npm:1.1.11"
+"@sapphire/lexure@npm:^1.1.12":
+  version: 1.1.12
+  resolution: "@sapphire/lexure@npm:1.1.12"
   dependencies:
-    "@sapphire/result": "npm:^2.7.3"
-  checksum: 10/438cd5b2a54fd0eef452135cf145bd77d269f5e04a93789b78c9997d5dad7a27c374ee71497259bd1763ab51b71f092abfbbfbe010d2d495b879ebd5b9979b76
+    "@sapphire/result": "npm:^2.8.0"
+  checksum: 10/a6560ce1cba4b855fa8d410de5fd2017fb32418d4b71a40d97959fa0022963057ebd13b05f3dfe380a034247c736a00d0f5d38cdda95238ce3351dbb78fd5848
   languageName: node
   linkType: hard
 
@@ -868,10 +877,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/result@npm:^2.7.3":
-  version: 2.7.3
-  resolution: "@sapphire/result@npm:2.7.3"
-  checksum: 10/39d4bfa14b89b9324fd8c0e9ce41868a73d5ddb1ffcdb5f0813c50b1e471bb4f3c8060f9539e772f4f49422964ddf1af71361acb70b836d1b487bddfcc7beae8
+"@sapphire/result@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "@sapphire/result@npm:2.8.0"
+  checksum: 10/d724707001a79412c65bb23ac522911677ba97576aa1b24e93180b75e9ab9e3ef26f7bfa549057ac0e12a0f8a8fc1d9cc86b3542f48405f89ed34548e3fff8ee
   languageName: node
   linkType: hard
 
@@ -948,12 +957,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^24.9.2":
-  version: 24.9.2
-  resolution: "@types/node@npm:24.9.2"
+"@types/node@npm:*, @types/node@npm:^24.10.0":
+  version: 24.10.0
+  resolution: "@types/node@npm:24.10.0"
   dependencies:
     undici-types: "npm:~7.16.0"
-  checksum: 10/3e76ad89cca317c0886deedab0245b6b2a04ef6c47362bd3918020296f3e9630334795af9cee8c6633eae774c85d848ff2e6bed5a7c3133fc94968364fc3ee36
+  checksum: 10/bc3abd9adc61423b1a72324208f3fcfe4f957b9fc8b9e81bf3fed584deb0b40f0e2af63cd0e2afa8f408d06f14bdba899ac638ac619f646badf8e72de246c052
   languageName: node
   linkType: hard
 
@@ -1168,13 +1177,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cron@npm:^4.3.3":
-  version: 4.3.3
-  resolution: "cron@npm:4.3.3"
+"cron@npm:^4.3.4":
+  version: 4.3.4
+  resolution: "cron@npm:4.3.4"
   dependencies:
     "@types/luxon": "npm:~3.7.0"
     luxon: "npm:~3.7.0"
-  checksum: 10/14019a639e08a8cd3eeb25dcc0541ee5cdae706ef925ac97a964ab7045284b3d3e7058f122dde6e9ff6931c836ea49c41675235d96e361365f6dd1e67bf0d347
+  checksum: 10/3350d1c2c34e5c159a7d2be5645eb52d72ac29cc081434703d118a64a5ff85d199ce940c446e6220aa2e348c7f05377c69f08d706eb5a076a0cda713cdd1f213
   languageName: node
   linkType: hard
 
@@ -1208,10 +1217,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord-api-types@npm:^0.38.1, discord-api-types@npm:^0.38.16, discord-api-types@npm:^0.38.31":
-  version: 0.38.31
-  resolution: "discord-api-types@npm:0.38.31"
-  checksum: 10/7c3439f4e613434a3de50375508a0bf34894ca9079d91edb66d981260734c771fa7388abbfd27b5bbd94693a74e5cadc0c634c1f89121ad6719249cfef7943d0
+"discord-api-types@npm:^0.38.1, discord-api-types@npm:^0.38.16, discord-api-types@npm:^0.38.30, discord-api-types@npm:^0.38.31":
+  version: 0.38.32
+  resolution: "discord-api-types@npm:0.38.32"
+  checksum: 10/9d494888a96cdd057ff270681398e61fa8ea4dee331a849e652372668aad3c225ea170655ce8ab4d8db831bcc5194f4d172ee3ccc1736b192797a5f356ea88b3
   languageName: node
   linkType: hard
 
@@ -1219,22 +1228,22 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "discord-status-webhook@workspace:."
   dependencies:
-    "@biomejs/biome": "npm:2.3.2"
+    "@biomejs/biome": "npm:2.3.4"
     "@commitlint/cli": "npm:^20.1.0"
     "@commitlint/config-conventional": "npm:^20.0.0"
     "@hono/node-server": "npm:^1.19.6"
-    "@sapphire/framework": "npm:^5.3.7"
+    "@sapphire/framework": "npm:^5.4.0"
     "@sapphire/plugin-logger": "npm:^4.1.0"
     "@sapphire/utilities": "npm:^3.18.2"
     "@skyra/env-utilities": "npm:^2.0.1"
-    "@types/node": "npm:^24.9.2"
+    "@types/node": "npm:^24.10.0"
     colorette: "npm:^2.0.20"
-    cron: "npm:^4.3.3"
+    cron: "npm:^4.3.4"
     discord.js: "npm:^14.24.2"
     drizzle-kit: "npm:^0.31.6"
     drizzle-orm: "npm:^0.44.7"
     hono: "npm:^4.10.4"
-    ky: "npm:^1.13.0"
+    ky: "npm:^1.14.0"
     npm-run-all2: "npm:^8.0.4"
     postgres: "npm:^3.4.7"
     rimraf: "npm:^6.1.0"
@@ -1844,10 +1853,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ky@npm:^1.13.0":
-  version: 1.13.0
-  resolution: "ky@npm:1.13.0"
-  checksum: 10/eba4244e480bbfe7818755ced910b13d89a76518c8d421ab65d35439512a16eda8c3b5997985851773b28c71238538abb96de9a796b89453e76a33543dad930d
+"ky@npm:^1.14.0":
+  version: 1.14.0
+  resolution: "ky@npm:1.14.0"
+  checksum: 10/ad4a1eac33ef0d17fb349c9e93fa4b1f134982e16e2b38828be38abc11f586d8b130ad7227521c4efc13b09c08fd43e349e23ef0ef9025e2d12c9dc187e98b53
   languageName: node
   linkType: hard
 
