@@ -1,6 +1,6 @@
 #!/bin/sh
 
-exec < /dev/tty
+[ -t 1 ] && exec < /dev/tty
 
 if git status --short | grep --quiet '^MM'; then
   printf '%s\n' "ERROR: Some staged files have unstaged changes" >&2
