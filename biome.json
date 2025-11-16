@@ -23,7 +23,7 @@
     },
     "files": {
         "ignoreUnknown": true,
-        "includes": ["**", "!**/.yarn/**", "!**/node_modules/**"]
+        "includes": ["**", "!**/.yarn", "!**/node_modules"]
     },
     "linter": {
         "enabled": true,
