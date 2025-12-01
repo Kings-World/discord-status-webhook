@@ -1,53 +1,53 @@
 {
-    "$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
-    "assist": {
-        "actions": {
-            "source": {
-                "organizeImports": "on"
-            }
-        }
-    },
-    "vcs": {
-        "enabled": true,
-        "clientKind": "git",
-        "useIgnoreFile": true,
-        "defaultBranch": "main"
-    },
-    "formatter": {
-        "enabled": true,
-        "formatWithErrors": false,
-        "indentStyle": "space",
-        "indentWidth": 4,
-        "lineEnding": "lf",
-        "useEditorconfig": true
-    },
-    "files": {
-        "ignoreUnknown": true,
-        "includes": ["**", "!**/.yarn", "!**/node_modules"]
-    },
-    "linter": {
-        "enabled": true,
-        "rules": {
-            "recommended": true,
-            "style": {
-                "noParameterAssign": "error",
-                "useAsConstAssertion": "error",
-                "useDefaultParameterLast": "error",
-                "useEnumInitializers": "error",
-                "useSelfClosingElements": "error",
-                "useSingleVarDeclarator": "error",
-                "noUnusedTemplateLiteral": "error",
-                "useNumberNamespace": "error",
-                "noInferrableTypes": "error",
-                "noUselessElse": "error"
-            }
-        }
-    },
-    "javascript": {
-        "formatter": {
-            "trailingCommas": "all",
-            "semicolons": "always",
-            "quoteStyle": "double"
-        }
-    }
+	"$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true,
+		"defaultBranch": "main"
+	},
+	"files": {
+		"ignoreUnknown": true,
+		"includes": ["**", "!**/.yarn"]
+	},
+	"formatter": {
+		"enabled": true,
+		"formatWithErrors": false,
+		"indentStyle": "tab",
+		"indentWidth": 4,
+		"lineEnding": "lf",
+		"useEditorconfig": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"style": {
+				"noParameterAssign": "error",
+				"useAsConstAssertion": "error",
+				"useDefaultParameterLast": "error",
+				"useEnumInitializers": "error",
+				"useSelfClosingElements": "error",
+				"useSingleVarDeclarator": "error",
+				"noUnusedTemplateLiteral": "error",
+				"useNumberNamespace": "error",
+				"noInferrableTypes": "error",
+				"noUselessElse": "error"
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"trailingCommas": "all",
+			"semicolons": "always",
+			"quoteStyle": "double"
+		}
+	}
 }

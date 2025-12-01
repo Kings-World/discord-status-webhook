@@ -6,14 +6,14 @@ startCronJob();
 startServer();
 
 declare module "@skyra/env-utilities" {
-    interface Env {
-        DATABASE_URL: string;
-        WEBHOOK_ID: string;
-        WEBHOOK_TOKEN: string;
-        ROLE_ID: string;
-        IDENTIFIED_STATUS_EMOJI: string;
-        INVESTIGATING_STATUS_EMOJI: string;
-        MONITORING_STATUS_EMOJI: string;
-        RESOLVED_STATUS_EMOJI: string;
-    }
+	interface Env {
+		DATABASE_URL: string;
+		WEBHOOK_ID: string;
+		WEBHOOK_TOKEN: string;
+		ROLE_ID: string;
+		IDENTIFIED_STATUS_EMOJI: string;
+		INVESTIGATING_STATUS_EMOJI: string;
+		MONITORING_STATUS_EMOJI: string;
+		RESOLVED_STATUS_EMOJI: string;
+	}
 }
