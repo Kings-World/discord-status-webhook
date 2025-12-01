@@ -2,4 +2,4 @@
 
 [ -t 1 ] && exec < /dev/tty
 
-yarn commitlint --edit $1
+yarn commitlint --edit "$1"
