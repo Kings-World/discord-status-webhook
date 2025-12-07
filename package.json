@@ -31,7 +31,7 @@
 		"colorette": "^2.0.20",
 		"cron": "^4.3.5",
 		"discord.js": "^14.25.1",
-		"drizzle-orm": "^0.44.7",
+		"drizzle-orm": "^0.45.0",
 		"hono": "^4.10.7",
 		"ky": "^1.14.0",
 		"postgres": "^3.4.7",
@@ -39,10 +39,10 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.3.8",
-		"@commitlint/cli": "^20.1.0",
-		"@commitlint/config-conventional": "^20.0.0",
+		"@commitlint/cli": "^20.2.0",
+		"@commitlint/config-conventional": "^20.2.0",
 		"@types/node": "^24.10.1",
-		"drizzle-kit": "^0.31.7",
+		"drizzle-kit": "^0.31.8",
 		"npm-run-all2": "^8.0.4",
 		"rimraf": "^6.1.2",
 		"typescript": "^5.9.3"
