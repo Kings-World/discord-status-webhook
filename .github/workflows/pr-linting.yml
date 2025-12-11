@@ -11,7 +11,7 @@ on:
 jobs:
   title:
     name: Title Validation
-    runs-on: blacksmith-2vcpu-ubuntu-2204
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Project
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
