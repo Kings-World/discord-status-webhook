@@ -46,7 +46,9 @@
 
 		/* Types */
 		"types": ["node"],
-		"forceConsistentCasingInFileNames": true
+		"forceConsistentCasingInFileNames": true,
+
+		"plugins": [{ "name": "@effect/language-service" }]
 	},
 	"include": ["src/**/*.ts"]
 }

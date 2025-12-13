@@ -1,4 +1,4 @@
-import "@​skyra/env-utilities/setup";
+import "@skyra/env-utilities/setup";
 
 import { envParseString } from "@skyra/env-utilities";
 import { defineConfig } from "drizzle-kit";
