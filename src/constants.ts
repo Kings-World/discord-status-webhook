@@ -2,7 +2,7 @@ import { Config } from "effect";
 import type { IncidentStatusType } from "./schema";
 
 export const incidentsJsonUrl =
-	"https://discordstatus.com/api/v2/incidents.jsonc";
+	"https://discordstatus.com/api/v2/incidents.json";
 
 export const Emojis = Config.all({
 	identifiedStatusEmoji: Config.string("IDENTIFIED_STATUS_EMOJI"),
