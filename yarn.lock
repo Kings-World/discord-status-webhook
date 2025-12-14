@@ -1222,7 +1222,7 @@ __metadata:
     cron: "npm:^4.3.5"
     discord.js: "npm:^14.25.1"
     drizzle-kit: "npm:^0.31.8"
-    drizzle-orm: "npm:^0.45.0"
+    drizzle-orm: "npm:^0.45.1"
     hono: "npm:^4.10.7"
     ky: "npm:^1.14.0"
     npm-run-all2: "npm:^8.0.4"
@@ -1293,9 +1293,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-orm@npm:^0.45.0":
-  version: 0.45.0
-  resolution: "drizzle-orm@npm:0.45.0"
+"drizzle-orm@npm:^0.45.1":
+  version: 0.45.1
+  resolution: "drizzle-orm@npm:0.45.1"
   peerDependencies:
     "@aws-sdk/client-rds-data": ">=3"
     "@cloudflare/workers-types": ">=4"
@@ -1384,7 +1384,7 @@ __metadata:
       optional: true
     sqlite3:
       optional: true
-  checksum: 10/c508f66a22cc43d86cc494cdcdab820d186e543296180936c708c0d547bff18998763eb4db8d1a947d22e72ab2116d7acbb419f1d894de995299e6f6e010b785
+  checksum: 10/6fd16005a913d7fb5d78bd33269bceb98a789323f5b9518eb7ebd5d8bc65b3e7a24423aac1fc6e369e2abdfdc521680b689f0ff1ca6ab0576b9c6f0652e9e5ba
   languageName: node
   linkType: hard
 
