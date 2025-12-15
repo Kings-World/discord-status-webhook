@@ -1158,13 +1158,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cron@npm:^4.3.5":
-  version: 4.3.5
-  resolution: "cron@npm:4.3.5"
+"cron@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "cron@npm:4.4.0"
   dependencies:
     "@types/luxon": "npm:~3.7.0"
     luxon: "npm:~3.7.0"
-  checksum: 10/c914bcd5ddf033c4bc2b1a86a92d96c5a000ece2488567a06ee57334820110282932cc0e8339bfba8732f9c593edf660caa0c9937cddd85a0dd7435063c8c911
+  checksum: 10/c969fdace813cc2b5898d755eb37a8a7e4192e4b43ef7b1a96c25bf9f54d5bcab016bfe851de297b570b67b4b5a37a2b242bde4a7c839860471ca243cdac79f6
   languageName: node
   linkType: hard
 
@@ -1219,7 +1219,7 @@ __metadata:
     "@skyra/env-utilities": "npm:^2.0.1"
     "@types/node": "npm:^24.10.3"
     colorette: "npm:^2.0.20"
-    cron: "npm:^4.3.5"
+    cron: "npm:^4.4.0"
     discord.js: "npm:^14.25.1"
     drizzle-kit: "npm:^0.31.8"
     drizzle-orm: "npm:^0.45.1"
