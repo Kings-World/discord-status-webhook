@@ -1223,7 +1223,7 @@ __metadata:
     discord.js: "npm:^14.25.1"
     drizzle-kit: "npm:^0.31.8"
     drizzle-orm: "npm:^0.45.1"
-    hono: "npm:^4.10.7"
+    hono: "npm:^4.10.8"
     ky: "npm:^1.14.1"
     npm-run-all2: "npm:^8.0.4"
     postgres: "npm:^3.4.7"
@@ -1666,10 +1666,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hono@npm:^4.10.7":
-  version: 4.10.7
-  resolution: "hono@npm:4.10.7"
-  checksum: 10/564be57c7e037ad1237b5451cee52b3d39d89fb7cefa00976ccb4650e1c4eeb37b928e87b85255b1595eb28f18e80ea5effdb1998b8464b742b434bee3e1dda7
+"hono@npm:^4.10.8":
+  version: 4.11.1
+  resolution: "hono@npm:4.11.1"
+  checksum: 10/7cffa49a0134d52613debc8aa536364718dbe842aecb5b28dbe4159ffb9488c135521b2dd055d93d584759095cb032299afd6f085e737707c21caae33b1413da
   languageName: node
   linkType: hard
 
