@@ -393,29 +393,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@effect/cluster@npm:^0.55.0":
-  version: 0.55.0
-  resolution: "@effect/cluster@npm:0.55.0"
+"@effect/cluster@npm:^0.56.0":
+  version: 0.56.0
+  resolution: "@effect/cluster@npm:0.56.0"
   dependencies:
     kubernetes-types: "npm:^1.30.0"
   peerDependencies:
-    "@effect/platform": ^0.93.6
-    "@effect/rpc": ^0.72.2
-    "@effect/sql": ^0.48.6
-    "@effect/workflow": ^0.15.0
-    effect: ^3.19.8
-  checksum: 10/f8844cf72735146561633a417036566f7671918af4ad8fdb784177bddb56c21659a367c7da7888baf5ee2d35fc7b9592b82e6457cf8bc7f711a09b203b1bd708
+    "@effect/platform": ^0.94.0
+    "@effect/rpc": ^0.73.0
+    "@effect/sql": ^0.49.0
+    "@effect/workflow": ^0.16.0
+    effect: ^3.19.13
+  checksum: 10/42a6da9339b0a17d90cb91cd71723a62b49403e56b3e5c49e35c9393fe6f520407568632a42d2a2a5829e6de41fef6b866aa95a20f095fa18fe38073223599de
   languageName: node
   linkType: hard
 
-"@effect/experimental@npm:^0.57.11":
-  version: 0.57.11
-  resolution: "@effect/experimental@npm:0.57.11"
+"@effect/experimental@npm:^0.58.0":
+  version: 0.58.0
+  resolution: "@effect/experimental@npm:0.58.0"
   dependencies:
     uuid: "npm:^11.0.3"
   peerDependencies:
-    "@effect/platform": ^0.93.6
-    effect: ^3.19.9
+    "@effect/platform": ^0.94.0
+    effect: ^3.19.13
     ioredis: ^5
     lmdb: ^3
   peerDependenciesMeta:
@@ -423,89 +423,89 @@ __metadata:
       optional: true
     lmdb:
       optional: true
-  checksum: 10/4cb95a65560c6bf3fb775626beb21f2bcff6956603ba9f1794cf7647bd6d50a347999e863a8cfcf2be7a42493abf4247fe9b4969299aac35a17bbee2d24d9833
+  checksum: 10/cd59fa1fb04de51c1e87cd33bb2059493497e9df179e6cad15eeffe5108db51758b3078ac73ca2df73f955654a4f2c333218a744e519199776d94bf15c331c89
   languageName: node
   linkType: hard
 
-"@effect/language-service@npm:^0.62.1":
-  version: 0.62.1
-  resolution: "@effect/language-service@npm:0.62.1"
+"@effect/language-service@npm:^0.62.4":
+  version: 0.62.4
+  resolution: "@effect/language-service@npm:0.62.4"
   bin:
     effect-language-service: cli.js
-  checksum: 10/8f0e7b4f56609ade1fafb5638509b9feef8efbc3575e6c6b98bd5c1b3c6c565e1d184c6344439d6f672317991a282c2a5efb381439a01fd8c47bd1f237055d48
+  checksum: 10/1db2385990c05a34e967a064bd2a82927ed9fc3dce60816b5732f026489d72144953edf2d195f17eed21fc7765322ead1d8dbb08d910718215ef3b0dfb49ef86
   languageName: node
   linkType: hard
 
-"@effect/platform-node-shared@npm:^0.56.0":
-  version: 0.56.0
-  resolution: "@effect/platform-node-shared@npm:0.56.0"
+"@effect/platform-node-shared@npm:^0.57.0":
+  version: 0.57.0
+  resolution: "@effect/platform-node-shared@npm:0.57.0"
   dependencies:
     "@parcel/watcher": "npm:^2.5.1"
     multipasta: "npm:^0.2.7"
     ws: "npm:^8.18.2"
   peerDependencies:
-    "@effect/cluster": ^0.55.0
-    "@effect/platform": ^0.93.6
-    "@effect/rpc": ^0.72.2
-    "@effect/sql": ^0.48.6
-    effect: ^3.19.8
-  checksum: 10/5d47993d296904bf67d4c6fc415df61ab6ffc9fc4c82e127011ed90fb1d5add35cd902acce5ee8287cb502e64620d1d49558cd90701ead20caa7e34ccbe15fec
+    "@effect/cluster": ^0.56.0
+    "@effect/platform": ^0.94.0
+    "@effect/rpc": ^0.73.0
+    "@effect/sql": ^0.49.0
+    effect: ^3.19.13
+  checksum: 10/cb072b929b50a8f05db9dd0ea05f102cc97c012807f8397e2916fea31bfd22578b89841ade9448239a46b29fcb746cdb83e5d9927a0e9686c73e2c20654fe1fb
   languageName: node
   linkType: hard
 
-"@effect/platform-node@npm:^0.103.0":
-  version: 0.103.0
-  resolution: "@effect/platform-node@npm:0.103.0"
+"@effect/platform-node@npm:^0.104.0":
+  version: 0.104.0
+  resolution: "@effect/platform-node@npm:0.104.0"
   dependencies:
-    "@effect/platform-node-shared": "npm:^0.56.0"
+    "@effect/platform-node-shared": "npm:^0.57.0"
     mime: "npm:^3.0.0"
     undici: "npm:^7.10.0"
     ws: "npm:^8.18.2"
   peerDependencies:
-    "@effect/cluster": ^0.55.0
-    "@effect/platform": ^0.93.6
-    "@effect/rpc": ^0.72.2
-    "@effect/sql": ^0.48.6
-    effect: ^3.19.8
-  checksum: 10/e416ee0629538a37fde7e817d9fc59f4992f4516b03d942797f849b50cb7461b2483ef93928de9384df94c5f4d9cfbed992dbd70770450f58f530d9543e70ce9
+    "@effect/cluster": ^0.56.0
+    "@effect/platform": ^0.94.0
+    "@effect/rpc": ^0.73.0
+    "@effect/sql": ^0.49.0
+    effect: ^3.19.13
+  checksum: 10/5c70d6534340be5c3f1786d23d921ca3fd46b24dc729f9120db41e6ea5ed2e7e5244bcee4986e3fd93dc8d63d5627f84d8ce05d2dbac54a359be8efa0cc086ab
   languageName: node
   linkType: hard
 
-"@effect/platform@npm:^0.93.7":
-  version: 0.93.7
-  resolution: "@effect/platform@npm:0.93.7"
+"@effect/platform@npm:^0.94.0":
+  version: 0.94.0
+  resolution: "@effect/platform@npm:0.94.0"
   dependencies:
     find-my-way-ts: "npm:^0.1.6"
     msgpackr: "npm:^1.11.4"
     multipasta: "npm:^0.2.7"
   peerDependencies:
-    effect: ^3.19.11
-  checksum: 10/5ce7090cc6cd80bc9f0c3afb81142c05cba78555f706524f4a340ddc77b8a5483cc0cc99487438c9756ae18f0f59d5ae7b444170a5926c4963ef198059edcd22
+    effect: ^3.19.13
+  checksum: 10/151cd52692e7f97f42d88dd293828d2038e4967153f5d6ca6f555a98971a8f5bd78ecaf3e6c584499c93de6c673d9a566c74e2d4e690f9186447df1d66631871
   languageName: node
   linkType: hard
 
-"@effect/rpc@npm:^0.72.2":
-  version: 0.72.2
-  resolution: "@effect/rpc@npm:0.72.2"
+"@effect/rpc@npm:^0.73.0":
+  version: 0.73.0
+  resolution: "@effect/rpc@npm:0.73.0"
   dependencies:
     msgpackr: "npm:^1.11.4"
   peerDependencies:
-    "@effect/platform": ^0.93.3
-    effect: ^3.19.5
-  checksum: 10/21bd1b852ef9a3102c1ce7425f99c641ed9c3272ec67a9b15ddfaea609b18c73ac3a6f5495a9c7868ccab6e711418480b161158b46f3d4499b87c78ef07f260a
+    "@effect/platform": ^0.94.0
+    effect: ^3.19.13
+  checksum: 10/4e10bcbdeafb0c50902fb44c34eb2a96cc77806f00e5e67b79bfdae20966b7c28548f0443a80761443841b0d0d3152b8ddb68098b3cde7fddf96fbd3b81e565b
   languageName: node
   linkType: hard
 
-"@effect/sql@npm:^0.48.6":
-  version: 0.48.6
-  resolution: "@effect/sql@npm:0.48.6"
+"@effect/sql@npm:^0.49.0":
+  version: 0.49.0
+  resolution: "@effect/sql@npm:0.49.0"
   dependencies:
     uuid: "npm:^11.0.3"
   peerDependencies:
-    "@effect/experimental": ^0.57.9
-    "@effect/platform": ^0.93.6
-    effect: ^3.19.8
-  checksum: 10/0345e8dbb610f6540e20bd439c892dec73200eccf37ad12b7a6e30c14a4c4fcfbd8effbacbdf85318342484d96f970210dc6fade5c618b4dd1ac3d3190ca2ae7
+    "@effect/experimental": ^0.58.0
+    "@effect/platform": ^0.94.0
+    effect: ^3.19.13
+  checksum: 10/8127c81f8418ada17b1600be92da9f05c5c695c8f231bb900702bb1f35e2c4badd2031c1c94d0ab057cb685e8cf34fbc55d5e54f41bd6390a3cad93dc154479a
   languageName: node
   linkType: hard
 
@@ -1155,7 +1155,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/luxon@npm:^3":
+"@types/luxon@npm:^3.7.1":
   version: 3.7.1
   resolution: "@types/luxon@npm:3.7.1"
   checksum: 10/c7bc164c278393ea0be938f986c74b4cddfab9013b1aff4495b016f771ded1d5b7b7b4825b2c7f0b8799edce19c5f531c28ff434ab3dedf994ac2d99a20fd4c4
@@ -1171,12 +1171,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^24.10.3":
-  version: 24.10.3
-  resolution: "@types/node@npm:24.10.3"
+"@types/node@npm:^24.10.4":
+  version: 24.10.4
+  resolution: "@types/node@npm:24.10.4"
   dependencies:
     undici-types: "npm:~7.16.0"
-  checksum: 10/b5f3f3431b333d077fe8f656edc2a352597a0c83a21157d7cbf2811d20ba31ecf31182aaf5013f83b72bf94e368ece736e76ff0e578ceee6a30b43a666b5071f
+  checksum: 10/a0b318b99a97103d151589a10e20d7d3ce93188a0e6466040eb2ce5fae33ca6785306737b4006560fe3152073cbb2b14747b854fa303296275c22afc8a37da2a
   languageName: node
   linkType: hard
 
@@ -1498,21 +1498,21 @@ __metadata:
     "@biomejs/biome": "npm:2.3.10"
     "@commitlint/cli": "npm:^20.2.0"
     "@commitlint/config-conventional": "npm:^20.2.0"
-    "@effect/cluster": "npm:^0.55.0"
-    "@effect/experimental": "npm:^0.57.11"
-    "@effect/language-service": "npm:^0.62.1"
-    "@effect/platform": "npm:^0.93.7"
-    "@effect/platform-node": "npm:^0.103.0"
-    "@effect/rpc": "npm:^0.72.2"
-    "@effect/sql": "npm:^0.48.6"
+    "@effect/cluster": "npm:^0.56.0"
+    "@effect/experimental": "npm:^0.58.0"
+    "@effect/language-service": "npm:^0.62.4"
+    "@effect/platform": "npm:^0.94.0"
+    "@effect/platform-node": "npm:^0.104.0"
+    "@effect/rpc": "npm:^0.73.0"
+    "@effect/sql": "npm:^0.49.0"
     "@sapphire/utilities": "npm:^3.18.2"
     "@skyra/env-utilities": "npm:^2.0.1"
-    "@types/luxon": "npm:^3"
-    "@types/node": "npm:^24.10.3"
+    "@types/luxon": "npm:^3.7.1"
+    "@types/node": "npm:^24.10.4"
     discord.js: "npm:^14.25.1"
     drizzle-kit: "npm:^0.31.8"
     drizzle-orm: "npm:^0.45.1"
-    effect: "npm:^3.19.11"
+    effect: "npm:^3.19.13"
     luxon: "npm:^3.7.2"
     npm-run-all2: "npm:^8.0.4"
     postgres: "npm:^3.4.7"
@@ -1676,13 +1676,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"effect@npm:^3.19.11":
-  version: 3.19.11
-  resolution: "effect@npm:3.19.11"
+"effect@npm:^3.19.13":
+  version: 3.19.13
+  resolution: "effect@npm:3.19.13"
   dependencies:
     "@standard-schema/spec": "npm:^1.0.0"
     fast-check: "npm:^3.23.1"
-  checksum: 10/3b25f94f7f07ba011d4c29b90a4501319c60d9bd46c2cd30753ebf5b4c808d94c8e0159e64058c92be69e41958e548403f6adc59926e0f3825136f41eda39ea2
+  checksum: 10/2829e9b6cbdb2c7ede877b5c44afb3f37e79914157ee1c7834b4c9dc509da30dd5e752eb91e4057ed9e9e7294e554d0bdedf69e88f38bb12f25d02cc6a482314
   languageName: node
   linkType: hard
 
