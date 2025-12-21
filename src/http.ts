@@ -8,8 +8,7 @@ import {
 	HttpServer,
 } from "@effect/platform";
 import { NodeHttpServer } from "@effect/platform-node";
-import { Effect, Layer, Option, Schema } from "effect";
-import { MainLive } from ".";
+import { Effect, Layer, Schema } from "effect";
 import { processIncident } from "./process";
 import { WebhookPayloadSchema } from "./schema";
 
@@ -35,17 +34,17 @@ const RoutesLive = HttpApiBuilder.group(Api, "Routes", (handlers) =>
 					yield* Effect.logInfo(
 						`The ${name} (${id}) ${component_type} updated from ${old_status} to ${new_status}`,
 					);
-					return Effect.succeed(
+					return yield* Effect.succeed(
 						"The component update has been processed",
 					);
 				}
 
 				yield* processIncident(payload.incident);
 
-				return Effect.succeed("The incident has been processed");
+				return yield* Effect.succeed("The incident has been processed");
 			}).pipe(
-				Effect.provide(MainLive),
 				Effect.catchAll((error) => Effect.fail(error)),
+				Effect.orDieWith((error) => Effect.logError(error)),
 			),
 		),
 );
