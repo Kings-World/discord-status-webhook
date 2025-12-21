@@ -1,5 +1,5 @@
 import { Config } from "effect";
-import type { IncidentStatusType } from "./schema";
+import type { IncidentStatusType } from "./schema.js";
 
 export const incidentsJsonUrl =
 	"https://discordstatus.com/api/v2/incidents.json";
