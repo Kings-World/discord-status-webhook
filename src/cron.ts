@@ -33,13 +33,13 @@ export const CronJobGen = Effect.gen(function* () {
 	yield* Effect.logInfo("The cron job ran successfully");
 }).pipe(
 	Effect.provide(FetchHttpClient.layer),
-	Effect.repeat(Schedule.cron(cron)),
 	Effect.catchAll((error) =>
 		Effect.logError(
 			"Something went wrong during cron execution",
 			Error.isError(error) ? error.message : error,
 		),
 	),
+	Effect.repeat(Schedule.cron(cron)),
 );
 
 export const CronJobService = Layer.scopedDiscard(CronJobGen);
