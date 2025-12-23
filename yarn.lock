@@ -427,12 +427,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@effect/language-service@npm:^0.62.4":
-  version: 0.62.4
-  resolution: "@effect/language-service@npm:0.62.4"
+"@effect/language-service@npm:^0.62.5":
+  version: 0.62.5
+  resolution: "@effect/language-service@npm:0.62.5"
   bin:
     effect-language-service: cli.js
-  checksum: 10/1db2385990c05a34e967a064bd2a82927ed9fc3dce60816b5732f026489d72144953edf2d195f17eed21fc7765322ead1d8dbb08d910718215ef3b0dfb49ef86
+  checksum: 10/e57e8b95dc4e05cc536e56f717f3af859cbfb7ba5328347c3b43fb3dc45b460ce7e79220a52206abf816272a6143e9989e54fb8c654c99815e5d449a7659c36d
   languageName: node
   linkType: hard
 
@@ -1500,7 +1500,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^20.2.0"
     "@effect/cluster": "npm:^0.56.0"
     "@effect/experimental": "npm:^0.58.0"
-    "@effect/language-service": "npm:^0.62.4"
+    "@effect/language-service": "npm:^0.62.5"
     "@effect/platform": "npm:^0.94.0"
     "@effect/platform-node": "npm:^0.104.0"
     "@effect/rpc": "npm:^0.73.0"
