@@ -45,7 +45,7 @@ export const createAndSendStatus = Effect.fn("createAndSendStatus")(function* (
 	yield* Effect.logInfo(
 		"The incident has been sent and saved into the database",
 	);
-}, Effect.withLogSpan("createAndSendStatus"));
+});
 
 export const updateStatus = Effect.fn("updateStatus")(function* (
 	saved: typeof discordStatus.$inferSelect,
@@ -72,7 +72,7 @@ export const updateStatus = Effect.fn("updateStatus")(function* (
 			})
 			.where(eq(discordStatus.incidentId, incident.id)),
 	);
-}, Effect.withLogSpan("updateStatus"));
+});
 
 export const isResolvedStatus = (status: IncidentStatusType) =>
 	status === "postmortem" || status === "resolved";
@@ -99,4 +99,4 @@ export const processIncident = Effect.fn("processIncident")(function* (
 	if (DateTime.fromJSDate(current.updatedAt) < incidentUpdate) {
 		yield* updateStatus(current, incident);
 	}
-}, Effect.withLogSpan("processIncident"));
+});
