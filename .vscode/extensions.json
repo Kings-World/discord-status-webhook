@@ -1,0 +1,12 @@
+{
+	"recommendations": [
+		"biomejs.biome", // Biome
+		"streetsidesoftware.code-spell-checker", // Code Spell CHecker
+		"editorconfig.editorconfig", // EditorConfig for VS Code
+		"effectful-tech.effect-vscode", // Effect Dev Tools
+		"usernamehw.errorlens", // Error Lens
+		"yoavbls.pretty-ts-errors", // Pretty TypeScript Errors
+		"sonarsource.sonarlint-vscode", // SonarQube for IDE
+		"christian-kohler.npm-intellisense" // NPM Intellisense
+	]
+}

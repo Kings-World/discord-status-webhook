@@ -1,19 +1,18 @@
 import "@skyra/env-utilities/setup";
-import { startCronJob } from "./core/cron.js";
-import { startServer } from "./core/server.js";
+import { DevTools } from "@effect/experimental/index";
+import { NodeRuntime } from "@effect/platform-node";
+import { Effect, Layer } from "effect";
+import { CronJobService } from "./cron.js";
+import * as Drizzle from "./db/drizzle.js";
+import { ServerLive } from "./http.js";
+import * as Webhook from "./webhook.js";
 
-startCronJob();
-startServer();
+export const MainLive = Layer.mergeAll(
+	Drizzle.fromEnv,
+	Webhook.fromEnv,
+	DevTools.layer(),
+);
 
-declare module "@skyra/env-utilities" {
-	interface Env {
-		DATABASE_URL: string;
-		WEBHOOK_ID: string;
-		WEBHOOK_TOKEN: string;
-		ROLE_ID: string;
-		IDENTIFIED_STATUS_EMOJI: string;
-		INVESTIGATING_STATUS_EMOJI: string;
-		MONITORING_STATUS_EMOJI: string;
-		RESOLVED_STATUS_EMOJI: string;
-	}
-}
+const Services = Layer.mergeAll(CronJobService, ServerLive);
+
+NodeRuntime.runMain(Layer.launch(Services).pipe(Effect.provide(MainLive)));
