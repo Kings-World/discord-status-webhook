@@ -24,7 +24,7 @@
 	},
 	"dependencies": {
 		"@hono/node-server": "^1.19.7",
-		"@sapphire/framework": "^5.4.0",
+		"@sapphire/framework": "^5.5.0",
 		"@sapphire/plugin-logger": "^4.1.0",
 		"@sapphire/utilities": "^3.18.2",
 		"@skyra/env-utilities": "^2.0.1",
