@@ -18,9 +18,7 @@ export const createAndSendStatus = Effect.fn("createAndSendStatus")(function* (
 	const webhookClient = yield* Webhook;
 	const statusData = yield* StatusConfig;
 	const embed = yield* createEmbed(statusData, incident);
-	const roleId = yield* Config.string("ROLE_ID").pipe(
-		Config.withDefault(null),
-	);
+	const roleId = yield* Config.withDefault(Config.string("ROLE_ID"), null);
 
 	const message = yield* webhookClient.use((wc) =>
 		wc.send({
