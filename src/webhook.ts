@@ -1,5 +1,9 @@
-import { WebhookClient } from "discord.js";
+import type { DiscordRest } from "dfx/DiscordREST/Generated";
 import { Config, Context, Data, Effect, Layer, Redacted } from "effect";
+import { useRest } from "./rest.js";
+
+type ExecuteWebhookFn = DiscordRest["executeWebhook"];
+type UpdateWebhookMessageFn = DiscordRest["updateWebhookMessage"];
 
 export class WebhookError extends Data.TaggedError("WebhookError")<{
 	cause?: unknown;
@@ -7,9 +11,13 @@ export class WebhookError extends Data.TaggedError("WebhookError")<{
 }> {}
 
 interface WebhookImpl {
-	use: <T>(
-		fn: (client: WebhookClient) => T,
-	) => Effect.Effect<Awaited<T>, WebhookError, never>;
+	send: (
+		options: Parameters<ExecuteWebhookFn>[2],
+	) => ReturnType<ExecuteWebhookFn>;
+	editMessage: (
+		messageId: string,
+		options: Parameters<UpdateWebhookMessageFn>[3],
+	) => ReturnType<UpdateWebhookMessageFn>;
 }
 
 export class Webhook extends Context.Tag("discord-status-webhook/webhook")<
@@ -17,52 +25,41 @@ export class Webhook extends Context.Tag("discord-status-webhook/webhook")<
 	WebhookImpl
 >() {}
 
-export const make = (...params: ConstructorParameters<typeof WebhookClient>) =>
+export const make = (
+	webhookId: string,
+	webhookToken: Redacted.Redacted<string>,
+) =>
 	Effect.gen(function* () {
-		const client = yield* Effect.try({
-			try: () => new WebhookClient(...params),
-			catch: (error) => new WebhookError({ cause: error }),
-		});
+		const rest = yield* useRest;
 
 		return Webhook.of({
-			use: (fn) =>
-				Effect.gen(function* () {
-					const result = yield* Effect.try({
-						try: () => fn(client),
-						catch: (error) =>
-							new WebhookError({
-								cause: error,
-								message: "Synchronous error in `Webhook.use`",
-							}),
-					});
-
-					if (result instanceof Promise) {
-						return yield* Effect.tryPromise({
-							try: () => result,
-							catch: (error) =>
-								new WebhookError({
-									cause: error,
-									message:
-										"Asynchronous error in `Webhook.use`",
-								}),
-						});
-					}
-
-					return result;
-				}),
+			send: (options) =>
+				rest
+					.executeWebhook(
+						webhookId,
+						Redacted.value(webhookToken),
+						options,
+					)
+					.pipe(Effect.withSpan("webhook.send")),
+			editMessage: (messageId, options) =>
+				rest
+					.updateWebhookMessage(
+						webhookId,
+						Redacted.value(webhookToken),
+						messageId,
+						options,
+					)
+					.pipe(Effect.withSpan("webhook.editMessage")),
 		});
 	});
 
 export const fromEnv = Layer.scoped(
 	Webhook,
 	Effect.gen(function* () {
-		yield* Effect.logInfo("Creating the webhook client");
+		yield* Effect.logInfo("Creating the webhook instance");
 		const webhookId = yield* Config.string("WEBHOOK_ID");
 		const webhookToken = yield* Config.redacted("WEBHOOK_TOKEN");
 
-		return yield* make({
-			id: webhookId,
-			token: Redacted.value(webhookToken),
-		});
+		return yield* make(webhookId, webhookToken);
 	}),
 );

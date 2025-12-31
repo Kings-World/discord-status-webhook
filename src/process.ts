@@ -12,21 +12,21 @@ export const createAndSendStatus = Effect.fn("createAndSendStatus")(function* (
 	incident: IncidentSchemaType,
 ) {
 	yield* Effect.logInfo(
-		`Sending ${incident.name} (${incident.id}) to Discord with a status of ${incident.status}`,
+		`Sending "${incident.name}" (${incident.id}) to Discord with a status of ${incident.status}`,
 	);
 
-	const webhookClient = yield* Webhook;
+	const webhook = yield* Webhook;
 	const statusData = yield* StatusConfig;
-	const embed = yield* createEmbed(statusData, incident);
 	const roleId = yield* Config.withDefault(Config.string("ROLE_ID"), null);
 
-	const message = yield* webhookClient.use((wc) =>
-		wc.send({
+	const message = yield* webhook.send({
+		params: { wait: true },
+		payload: {
 			content: roleId ? `<@&${roleId}>` : undefined,
-			allowedMentions: { roles: roleId ? [roleId] : [] },
-			embeds: [embed],
-		}),
-	);
+			allowed_mentions: { roles: roleId ? [roleId] : [] },
+			embeds: [createEmbed(statusData, incident)],
+		},
+	});
 
 	yield* Effect.logInfo("Saving the incident into the database");
 
@@ -50,15 +50,14 @@ export const updateStatus = Effect.fn("updateStatus")(function* (
 	incident: IncidentSchemaType,
 ) {
 	yield* Effect.logInfo(
-		`Updating the status for ${incident.name} (${incident.id}) from ${saved.status} to ${incident.status}`,
+		`Updating the status for "${incident.name}" (${incident.id}) from ${saved.status} to ${incident.status}`,
 	);
 
-	const webhookClient = yield* Webhook;
+	const webhook = yield* Webhook;
 	const statusData = yield* StatusConfig;
-	const embed = yield* createEmbed(statusData, incident);
-	yield* webhookClient.use((wc) =>
-		wc.editMessage(saved.messageId, { embeds: [embed] }),
-	);
+	yield* webhook.editMessage(saved.messageId, {
+		payload: { embeds: [createEmbed(statusData, incident)] },
+	});
 
 	const drizzle = yield* Drizzle;
 	yield* drizzle.use((db) =>
