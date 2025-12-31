@@ -355,12 +355,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@effect/language-service@npm:^0.62.5":
-  version: 0.62.5
-  resolution: "@effect/language-service@npm:0.62.5"
+"@effect/language-service@npm:^0.63.2":
+  version: 0.63.2
+  resolution: "@effect/language-service@npm:0.63.2"
   bin:
     effect-language-service: cli.js
-  checksum: 10/e57e8b95dc4e05cc536e56f717f3af859cbfb7ba5328347c3b43fb3dc45b460ce7e79220a52206abf816272a6143e9989e54fb8c654c99815e5d449a7659c36d
+  checksum: 10/284f686e16310dbceeb2ea02a69cbddda3b5c9743feb65e6ba162e0ccf36ccbc68e222d3e05cac7ddeb1c9bf697521144a7d87d90661695e7c72726b2a4e17cf
   languageName: node
   linkType: hard
 
@@ -1499,7 +1499,7 @@ __metadata:
     "@discordjs/formatters": "npm:^0.6.2"
     "@effect/cluster": "npm:^0.56.0"
     "@effect/experimental": "npm:^0.58.0"
-    "@effect/language-service": "npm:^0.62.5"
+    "@effect/language-service": "npm:^0.63.2"
     "@effect/platform": "npm:^0.94.0"
     "@effect/platform-node": "npm:^0.104.0"
     "@effect/rpc": "npm:^0.73.0"
