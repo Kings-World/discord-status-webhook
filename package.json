@@ -23,7 +23,7 @@
 		"db:studio": "drizzle-kit studio"
 	},
 	"dependencies": {
-		"@hono/node-server": "^1.19.7",
+		"@hono/node-server": "^1.19.9",
 		"@sapphire/framework": "^5.5.0",
 		"@sapphire/plugin-logger": "^4.1.0",
 		"@sapphire/utilities": "^3.18.2",
