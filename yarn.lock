@@ -945,7 +945,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^24.10.8":
+"@types/node@npm:*, @types/node@npm:^24.10.9":
   version: 24.10.9
   resolution: "@types/node@npm:24.10.9"
   dependencies:
@@ -1217,7 +1217,7 @@ __metadata:
     "@sapphire/plugin-logger": "npm:^4.1.0"
     "@sapphire/utilities": "npm:^3.18.2"
     "@skyra/env-utilities": "npm:^2.0.1"
-    "@types/node": "npm:^24.10.8"
+    "@types/node": "npm:^24.10.9"
     colorette: "npm:^2.0.20"
     cron: "npm:^4.4.0"
     discord.js: "npm:^14.25.1"
