@@ -1189,7 +1189,7 @@ __metadata:
     colorette: "npm:^2.0.20"
     cron: "npm:^4.4.0"
     discord.js: "npm:^14.25.1"
-    drizzle-kit: "npm:^0.31.8"
+    drizzle-kit: "npm:^0.31.9"
     drizzle-orm: "npm:^0.45.1"
     hono: "npm:^4.11.7"
     ky: "npm:^1.14.3"
@@ -1247,9 +1247,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-kit@npm:^0.31.8":
-  version: 0.31.8
-  resolution: "drizzle-kit@npm:0.31.8"
+"drizzle-kit@npm:^0.31.9":
+  version: 0.31.9
+  resolution: "drizzle-kit@npm:0.31.9"
   dependencies:
     "@drizzle-team/brocli": "npm:^0.10.2"
     "@esbuild-kit/esm-loader": "npm:^2.5.5"
@@ -1257,7 +1257,7 @@ __metadata:
     esbuild-register: "npm:^3.5.0"
   bin:
     drizzle-kit: bin.cjs
-  checksum: 10/a87120067370e736685afe3cf5b32db2b22ad909ade849d437568455736fd4a2815ad58c038075e66b8a77ab685f6515dd3d77120126ac83737240bbe80de583
+  checksum: 10/9b69dd6ec3df6dfb02269c3cbfe51c48c20e01d01e72f0f4e41fb30b3f9a619b06a940794e7c8c388c1d134eea7b8b9911b02ff3733919962cc14d8c2edbc853
   languageName: node
   linkType: hard
 
