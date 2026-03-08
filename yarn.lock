@@ -741,7 +741,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hono/node-server@npm:^1.19.10":
+"@hono/node-server@npm:^1.19.11":
   version: 1.19.11
   resolution: "@hono/node-server@npm:1.19.11"
   peerDependencies:
@@ -1188,7 +1188,7 @@ __metadata:
     "@biomejs/biome": "npm:2.4.5"
     "@commitlint/cli": "npm:^20.4.3"
     "@commitlint/config-conventional": "npm:^20.4.3"
-    "@hono/node-server": "npm:^1.19.10"
+    "@hono/node-server": "npm:^1.19.11"
     "@sapphire/framework": "npm:^5.5.0"
     "@sapphire/plugin-logger": "npm:^4.1.0"
     "@sapphire/utilities": "npm:^3.18.2"
