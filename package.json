@@ -23,7 +23,7 @@
 		"db:studio": "drizzle-kit studio"
 	},
 	"dependencies": {
-		"@hono/node-server": "^1.19.12",
+		"@hono/node-server": "^1.19.13",
 		"@sapphire/framework": "^5.5.0",
 		"@sapphire/plugin-logger": "^4.1.0",
 		"@sapphire/utilities": "^3.18.2",
@@ -32,9 +32,9 @@
 		"cron": "^4.4.0",
 		"discord.js": "^14.26.2",
 		"drizzle-orm": "^0.45.2",
-		"hono": "^4.12.10",
+		"hono": "^4.12.12",
 		"ky": "^1.14.3",
-		"postgres": "^3.4.8",
+		"postgres": "^3.4.9",
 		"zod": "^4.3.6"
 	},
 	"devDependencies": {
