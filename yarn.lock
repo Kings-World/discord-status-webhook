@@ -1487,7 +1487,7 @@ __metadata:
     drizzle-kit: "npm:^0.31.10"
     drizzle-orm: "npm:^0.45.2"
     hono: "npm:^4.12.14"
-    ky: "npm:^1.14.3"
+    ky: "npm:^2.0.1"
     npm-run-all2: "npm:^8.0.4"
     postgres: "npm:^3.4.9"
     rimraf: "npm:^6.1.3"
@@ -2220,10 +2220,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ky@npm:^1.14.3":
-  version: 1.14.3
-  resolution: "ky@npm:1.14.3"
-  checksum: 10/afd6a6ff10e33138d5338c014a051ca920c6ced7f8452748dfe960c26fb5456f36e103cd8b5868ebf2a38bf13c2b3f53b74cbea44a1b53923e1921bb9a6447b1
+"ky@npm:^2.0.1":
+  version: 2.0.2
+  resolution: "ky@npm:2.0.2"
+  checksum: 10/a146b47f7a19fb8b564fcbdb8418c61ccbbf7d1bc918db389bec4ac74221a417926b5701461b13b05e14055e479c8a1fcbb7364a5ff772828c054b31e0b2239a
   languageName: node
   linkType: hard
 
