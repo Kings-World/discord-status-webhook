@@ -1,14 +1,14 @@
 {
 	"compilerOptions": {
 		/* Basic */
-		"module": "ESNext",
+		"module": "nodenext",
 		"lib": ["ESNext"],
 		"target": "ESNext",
 		"outDir": "dist",
 		"rootDir": "src",
 
 		/* Modules */
-		"moduleResolution": "node",
+		"moduleResolution": "nodenext",
 		"resolveJsonModule": true,
 
 		/* Emit */
