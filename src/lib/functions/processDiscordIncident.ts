@@ -12,12 +12,7 @@ export async function processDiscordIncident(incident: IncidentSchema) {
 		where: eq(discordStatus.incidentId, incident.id),
 	});
 	if (!status) {
-		if (isResolveStatus(incident.status)) {
-			return console.warn(
-				`DiscordStatus[${incident.id}] Skipping creation of ${incident.name} because it has already been resolved`,
-			);
-		}
-
+		if (isResolveStatus(incident.status)) return;
 		await createAndSendStatus(incident);
 		return;
 	}
