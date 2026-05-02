@@ -11,7 +11,7 @@ export async function updateStatus(
 ) {
 	if (!incident.incident_updates[0]) {
 		return console.warn(
-			`DiscordStatus[${incident.id}] No incident updates found for ${incident.name}, skipping...`,
+			`DiscordStatus[${incident.id}] Skipping update for ${incident.name} because no incident updates were found`,
 		);
 	}
 
