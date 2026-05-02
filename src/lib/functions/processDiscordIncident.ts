@@ -4,6 +4,7 @@ import { db } from "../db/drizzle.js";
 import { discordStatus } from "../db/schema.js";
 import type { IncidentSchema } from "../zod.js";
 import { createAndSendStatus } from "./createAndSendStatus.js";
+import { isResolveStatus } from "./isResolveStatus.js";
 import { updateStatus } from "./updateStatus.js";
 
 export async function processDiscordIncident(incident: IncidentSchema) {
@@ -11,6 +12,12 @@ export async function processDiscordIncident(incident: IncidentSchema) {
 		where: eq(discordStatus.incidentId, incident.id),
 	});
 	if (!status) {
+		if (isResolveStatus(incident.status)) {
+			return console.warn(
+				`DiscordStatus[${incident.id}] Skipping creation of ${incident.name} because it has already been resolved`,
+			);
+		}
+
 		await createAndSendStatus(incident);
 		return;
 	}

@@ -8,7 +8,7 @@ import { createEmbed } from "./createEmbed.js";
 export async function createAndSendStatus(incident: IncidentSchema) {
 	if (!incident.incident_updates[0]) {
 		return console.warn(
-			`DiscordStatus[${incident.id}] No incident updates found for ${incident.name}, skipping...`,
+			`DiscordStatus[${incident.id}] Skipping creation of ${incident.name} because no incident updates were found`,
 		);
 	}
 
