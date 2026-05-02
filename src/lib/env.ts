@@ -16,6 +16,7 @@ export const envSchema = z.object({
 	INVESTIGATING_STATUS_EMOJI: optional(snowflakeSchema),
 	MONITORING_STATUS_EMOJI: optional(snowflakeSchema),
 	RESOLVED_STATUS_EMOJI: optional(snowflakeSchema),
+	DEBUG: z.stringbool().optional(),
 });
 
 const parsed = envSchema.safeParse(process.env);

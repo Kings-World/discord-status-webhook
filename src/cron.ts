@@ -1,7 +1,8 @@
+import { env } from "./lib/env";
 import { checkApi } from "./lib/functions/checkApi";
 
 Bun.cron("*/5 * * * *", () => {
-	if (Bun.env["DEBUG"] === "true") console.log("Cron job started ticking");
+	if (env.DEBUG) console.log("Cron job started ticking");
 	void checkApi();
 });
 
