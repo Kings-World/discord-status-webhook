@@ -25,12 +25,16 @@ export class Webhook extends Context.Tag("discord-status-webhook/webhook")<
 	WebhookImpl
 >() {}
 
-export const make = (
-	webhookId: string,
-	webhookToken: Redacted.Redacted<string>,
-) =>
+export const fromEnv = Layer.scoped(
+	Webhook,
 	Effect.gen(function* () {
 		const rest = yield* useRest;
+		const webhookId = yield* Config.string("WEBHOOK_ID");
+		const webhookToken = yield* Config.redacted("WEBHOOK_TOKEN");
+
+		yield* Effect.logInfo("Creating webhook instance", {
+			webhookId: `${webhookId.slice(0, 8)}...`,
+		});
 
 		return Webhook.of({
 			send: (options) =>
@@ -51,15 +55,5 @@ export const make = (
 					)
 					.pipe(Effect.withSpan("webhook.editMessage")),
 		});
-	});
-
-export const fromEnv = Layer.scoped(
-	Webhook,
-	Effect.gen(function* () {
-		yield* Effect.logInfo("Creating the webhook instance");
-		const webhookId = yield* Config.string("WEBHOOK_ID");
-		const webhookToken = yield* Config.redacted("WEBHOOK_TOKEN");
-
-		return yield* make(webhookId, webhookToken);
 	}),
 );

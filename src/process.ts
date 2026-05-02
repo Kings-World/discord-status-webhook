@@ -6,69 +6,147 @@ import { Drizzle } from "./db/drizzle.js";
 import { discordStatus } from "./db/schema.js";
 import { createEmbed } from "./embed.js";
 import type { IncidentSchemaType, IncidentStatusType } from "./schema.js";
-import { Webhook } from "./webhook.js";
+import { Webhook, WebhookError } from "./webhook.js";
 
 export const createAndSendStatus = Effect.fn("createAndSendStatus")(function* (
 	incident: IncidentSchemaType,
 ) {
-	yield* Effect.logInfo(
-		`Sending "${incident.name}" (${incident.id}) to Discord with a status of ${incident.status}`,
-	);
-
+	const startTime = Date.now();
 	const webhook = yield* Webhook;
 	const statusData = yield* StatusConfig;
 	const roleId = yield* Config.withDefault(Config.string("ROLE_ID"), null);
 
-	const message = yield* webhook.send({
-		params: { wait: true },
-		payload: {
-			content: roleId ? `<@&${roleId}>` : undefined,
-			allowed_mentions: { roles: roleId ? [roleId] : [] },
-			embeds: [createEmbed(statusData, incident)],
-		},
-	});
+	const event = {
+		event: "incident_notification_created",
+		incident_id: incident.id,
+		incident_name: incident.name,
+		incident_status: incident.status,
+		incident_impact: incident.impact,
+		incident_components_count: incident.components.length,
+		incident_updates_count: incident.incident_updates.length,
+		role_tagged: roleId !== null,
+		service: "discord-status-webhook",
+		start_timestamp: new Date().toISOString(),
+	};
 
-	yield* Effect.logInfo("Saving the incident into the database");
+	try {
+		const message = yield* webhook.send({
+			params: { wait: true },
+			payload: {
+				content: roleId ? `<@&${roleId}>` : undefined,
+				allowed_mentions: { roles: roleId ? [roleId] : [] },
+				embeds: [createEmbed(statusData, incident)],
+			},
+		});
 
-	const drizzle = yield* Drizzle;
-	yield* drizzle.use((db) =>
-		db.insert(discordStatus).values({
-			incidentId: incident.id,
-			messageId: message.id,
-			status: incident.status,
-			updateId: incident.incident_updates[0].id,
-		}),
-	);
+		const drizzle = yield* Drizzle;
+		yield* drizzle.use((db) =>
+			db.insert(discordStatus).values({
+				incidentId: incident.id,
+				messageId: message.id,
+				status: incident.status,
+				updateId: incident.incident_updates[0].id,
+			}),
+		);
 
-	yield* Effect.logInfo(
-		"The incident has been sent and saved into the database",
-	);
+		yield* Effect.logInfo({
+			...event,
+			outcome: "success",
+			duration_ms: Date.now() - startTime,
+			discord_message_id: message.id,
+			discord_update_id: incident.incident_updates[0].id,
+		});
+	} catch (error) {
+		const errorInfo =
+			error instanceof Error
+				? {
+						type: error.constructor.name,
+						message: error.message,
+					}
+				: {
+						type: "UnknownError",
+						message: String(error),
+					};
+
+		yield* Effect.logError({
+			...event,
+			outcome: "error",
+			duration_ms: Date.now() - startTime,
+			error: {
+				...errorInfo,
+				retriable: false,
+			},
+		});
+		return yield* Effect.fail(new WebhookError({ cause: error }));
+	}
 });
 
 export const updateStatus = Effect.fn("updateStatus")(function* (
 	saved: typeof discordStatus.$inferSelect,
 	incident: IncidentSchemaType,
 ) {
-	yield* Effect.logInfo(
-		`Updating the status for "${incident.name}" (${incident.id}) from ${saved.status} to ${incident.status}`,
-	);
-
+	const startTime = Date.now();
 	const webhook = yield* Webhook;
 	const statusData = yield* StatusConfig;
-	yield* webhook.editMessage(saved.messageId, {
-		payload: { embeds: [createEmbed(statusData, incident)] },
-	});
 
-	const drizzle = yield* Drizzle;
-	yield* drizzle.use((db) =>
-		db
-			.update(discordStatus)
-			.set({
-				status: incident.status,
-				updateId: incident.incident_updates[0].id,
-			})
-			.where(eq(discordStatus.incidentId, incident.id)),
-	);
+	const event = {
+		event: "incident_notification_updated",
+		incident_id: incident.id,
+		incident_name: incident.name,
+		incident_status: incident.status,
+		incident_impact: incident.impact,
+		previous_status: saved.status,
+		previous_update_id: saved.updateId,
+		new_update_id: incident.incident_updates[0].id,
+		discord_message_id: saved.messageId,
+		service: "discord-status-webhook",
+		start_timestamp: new Date().toISOString(),
+	};
+
+	try {
+		yield* webhook.editMessage(saved.messageId, {
+			payload: { embeds: [createEmbed(statusData, incident)] },
+		});
+
+		const drizzle = yield* Drizzle;
+		yield* drizzle.use((db) =>
+			db
+				.update(discordStatus)
+				.set({
+					status: incident.status,
+					updateId: incident.incident_updates[0].id,
+				})
+				.where(eq(discordStatus.incidentId, incident.id)),
+		);
+
+		yield* Effect.logInfo({
+			...event,
+			outcome: "success",
+			duration_ms: Date.now() - startTime,
+		});
+	} catch (error) {
+		const errorInfo =
+			error instanceof Error
+				? {
+						type: error.constructor.name,
+						message: error.message,
+					}
+				: {
+						type: "UnknownError",
+						message: String(error),
+					};
+
+		yield* Effect.logError({
+			...event,
+			outcome: "error",
+			duration_ms: Date.now() - startTime,
+			error: {
+				...errorInfo,
+				retriable: true,
+			},
+		});
+		return yield* Effect.fail(new WebhookError({ cause: error }));
+	}
 });
 
 export const isResolvedStatus = (status: IncidentStatusType) =>

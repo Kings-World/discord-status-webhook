@@ -35,9 +35,22 @@ const RoutesLive = HttpApiBuilder.group(Api, "Routes", (handlers) =>
 					const { id, name } = payload.component;
 					const { component_type, old_status, new_status } =
 						payload.component_update;
-					yield* Effect.logInfo(
-						`The ${name} (${id}) ${component_type} updated from ${old_status} to ${new_status}`,
-					);
+
+					yield* Effect.logInfo({
+						event: "webhook_received",
+						webhook_type: "component_update",
+						component_id: id,
+						component_name: name,
+						component_type,
+						status_change: {
+							from: old_status,
+							to: new_status,
+						},
+						service: "discord-status-webhook",
+						outcome: "success",
+						timestamp: new Date().toISOString(),
+					});
+
 					return yield* Effect.succeed({
 						message: "The component update has been processed",
 					});
@@ -45,12 +58,46 @@ const RoutesLive = HttpApiBuilder.group(Api, "Routes", (handlers) =>
 
 				yield* processIncident(payload.incident);
 
+				yield* Effect.logInfo({
+					event: "webhook_received",
+					webhook_type: "incident_update",
+					incident_id: payload.incident.id,
+					incident_name: payload.incident.name,
+					incident_status: payload.incident.status,
+					incident_impact: payload.incident.impact,
+					service: "discord-status-webhook",
+					outcome: "success",
+					timestamp: new Date().toISOString(),
+				});
+
 				return yield* Effect.succeed({
 					message: "The incident has been processed",
 				});
 			}).pipe(
 				Effect.catchAll((error) => Effect.fail(error)),
-				Effect.orDieWith((error) => Effect.logError(error)),
+				Effect.orDieWith((error) => {
+					const errorInfo =
+						error instanceof Error
+							? {
+									type: error.constructor.name,
+									message: error.message,
+								}
+							: {
+									type: "UnknownError",
+									message: String(error),
+								};
+
+					return Effect.logError({
+						event: "webhook_received",
+						service: "discord-status-webhook",
+						outcome: "error",
+						error: {
+							...errorInfo,
+							retriable: false,
+						},
+						timestamp: new Date().toISOString(),
+					});
+				}),
 			),
 		),
 );
