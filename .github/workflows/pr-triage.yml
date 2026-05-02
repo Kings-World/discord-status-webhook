@@ -25,6 +25,6 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Run Validation
-        run: echo "$PR_TITLE" | bunx --bun commitlint
+        run: echo "$PR_TITLE" | bunx commitlint
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
