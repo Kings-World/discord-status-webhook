@@ -11,6 +11,8 @@ jobs:
   typecheck:
     name: Check TypeScript types
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout Project
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
@@ -31,6 +33,8 @@ jobs:
   biome:
     name: Check Biome formatting and linting
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout Project
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
@@ -44,6 +48,8 @@ jobs:
   commitlint:
     name: Commit Message Linting
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout Project
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6

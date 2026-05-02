@@ -1,4 +1,4 @@
-name: PR Linting
+name: PR Triage
 
 on:
   pull_request_target:
@@ -12,6 +12,8 @@ jobs:
   title:
     name: Title Validation
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout Project
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
