@@ -4,8 +4,8 @@ import { db } from "../db/drizzle.js";
 import { discordStatus } from "../db/schema.js";
 import type { IncidentSchema } from "../zod.js";
 import { createAndSendStatus } from "./createAndSendStatus.js";
-import { updateStatus } from "./updateStatus.js";
 import { isResolveStatus } from "./isResolveStatus.js";
+import { updateStatus } from "./updateStatus.js";
 
 export async function processDiscordIncident(incident: IncidentSchema) {
 	const status = await db.query.discordStatus.findFirst({
