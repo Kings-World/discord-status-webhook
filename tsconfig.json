@@ -1,52 +1,30 @@
 {
-	"compilerOptions": {
-		/* Basic */
-		"module": "nodenext",
-		"lib": ["ESNext"],
-		"target": "ESNext",
-		"outDir": "dist",
-		"rootDir": "src",
+  "compilerOptions": {
+    // Environment setup & latest features
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "module": "Preserve",
+    "moduleDetection": "force",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "types": ["bun"],
 
-		/* Modules */
-		"moduleResolution": "nodenext",
-		"resolveJsonModule": true,
+    // Bundler mode
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
 
-		/* Emit */
-		"declaration": false,
-		"declarationMap": false,
-		"pretty": true,
-		"esModuleInterop": true,
-		"newLine": "lf",
-		"removeComments": true,
-		"useDefineForClassFields": true,
-		"importHelpers": true,
+    // Best practices
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
 
-		/* Source Maps */
-		"inlineSourceMap": true,
-		// "inlineSources": true,
-		// "sourceRoot": "/",
-
-		/* Strict Options */
-		"strict": true,
-		"skipLibCheck": true,
-		"alwaysStrict": true,
-		"allowSyntheticDefaultImports": true,
-		"strictNullChecks": true,
-		"strictBindCallApply": true,
-		"strictPropertyInitialization": true,
-		"verbatimModuleSyntax": true,
-		"noFallthroughCasesInSwitch": true,
-		"noUnusedLocals": true,
-		"noImplicitAny": true,
-		"noImplicitThis": true,
-		"noImplicitReturns": false,
-		"noUnusedParameters": true,
-		"noEmitHelpers": false,
-		"preserveConstEnums": true,
-
-		/* Types */
-		"types": ["node"],
-		"forceConsistentCasingInFileNames": true
-	},
-	"include": ["src/**/*.ts"]
+    // Some stricter flags (disabled by default)
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noPropertyAccessFromIndexSignature": false
+  }
 }

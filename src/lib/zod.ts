@@ -123,5 +123,11 @@ export const incidentsRequestSchema = z.object({
 	incidents: z.array(incidentSchema),
 });
 
+// the body of the post request sent by the webhook
+export const webhookPostRequestSchema = z.union([
+	incidentWebhookSchema,
+	componentUpdateWebhookSchema,
+]);
+
 export type IncidentSchema = z.infer<typeof incidentSchema>;
 export type IncidentStatusEnum = z.infer<typeof incidentStatusEnum>;

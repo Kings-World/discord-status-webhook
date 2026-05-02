@@ -1,0 +1,4 @@
+{
+	"pre-commit": "bun biome check --write --staged --no-errors-on-unmatched && git update-index --again",
+	"commit-msg": "bun commitlint --edit \"$1\""
+}

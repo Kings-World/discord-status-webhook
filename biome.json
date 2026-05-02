@@ -15,7 +15,7 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"includes": ["**", "!**/.yarn"]
+		"includes": ["**"]
 	},
 	"formatter": {
 		"enabled": true,

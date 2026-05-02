@@ -13,7 +13,3 @@ node_modules/
 # Environment Variables
 .env*
 !.env.example
-
-# Yarn files
-.yarn/install-state.gz
-.yarn/build-state.yml
