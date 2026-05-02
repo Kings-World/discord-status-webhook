@@ -1,19 +1,11 @@
-import "@​skyra/env-utilities/setup";
-
-import { envParseString } from "@skyra/env-utilities";
 import { defineConfig } from "drizzle-kit";
+import { env } from "./src/lib/env";
 
 export default defineConfig({
-	out: "./drizzle",
-	schema: "./src/db/schema.ts",
+	out: "./migrations",
+	schema: "./src/lib/db/schema.ts",
 	dialect: "postgresql",
 	dbCredentials: {
-		url: envParseString("DATABASE_URL"),
+		url: env.DATABASE_URL,
 	},
 });
-
-declare module "@skyra/env-utilities" {
-	interface Env {
-		DATABASE_URL: string;
-	}
-}

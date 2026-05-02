@@ -17,18 +17,17 @@ jobs:
       - name: Checkout Project
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
-      - name: Setup Node.js
-        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
-        with:
-          node-version: 24
-          cache: yarn
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
+
+      - name: Add TypeScript problem matcher
+        run: echo "::add-matcher::.github/tsc.json"
 
       - name: Install Dependencies
-        run: yarn --immutable
+        run: bun install --frozen-lockfile
 
       - name: Check types
-        # setup-node tsc problem matcher doesn't like pretty errors
-        run: yarn typecheck --pretty false
+        run: bunx tsc --pretty false
 
   biome:
     name: Check Biome formatting and linting
@@ -56,14 +55,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
-        with:
-          node-version: 24
-          cache: yarn
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
 
       - name: Install Dependencies
-        run: yarn --immutable
+        run: bun install --frozen-lockfile
 
       # https://commitlint.js.org/guides/ci-setup#github-actions
       - name: Validate current commit (last commit) with commitlint
@@ -73,7 +69,7 @@ jobs:
       - name: Validate PR commits with commitlint
         if: github.event_name == 'pull_request'
         run: |
-          yarn commitlint \
+          bunx commitlint \
             --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} \
             --to ${{ github.event.pull_request.head.sha }} \
             --verbose

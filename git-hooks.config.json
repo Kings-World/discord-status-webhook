@@ -1,0 +1,4 @@
+{
+	"pre-commit": "bunx biome check --write && git update-index --again",
+	"commit-msg": "bunx commitlint --edit \"$1\""
+}
