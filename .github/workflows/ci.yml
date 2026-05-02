@@ -27,7 +27,7 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Check types
-        run: bun tsc --pretty false
+        run: bunx --bun tsc --pretty false
 
   biome:
     name: Check Biome formatting and linting
