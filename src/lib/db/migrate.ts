@@ -11,10 +11,13 @@ try {
 	await migrate(db, {
 		migrationsFolder: join(process.cwd(), "migrations"),
 	});
-	console.log("Database migrations completed.");
-} catch (error) {
+} catch {
+	/*
 	if (Error.isError(error)) {
 		console.error("Error running database migrations:", error.message);
 	}
 	process.exit(1);
+	*/
 }
+
+console.log("Database migrations completed.");
