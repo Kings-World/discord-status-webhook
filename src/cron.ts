@@ -1,9 +1,9 @@
-import { env } from "./lib/env";
+import { logger } from "./lib/constants";
 import { checkApi } from "./lib/functions/checkApi";
 
-Bun.cron("*/5 * * * *", () => {
-	if (env.DEBUG) console.log("Cron job started ticking");
+Bun.cron("* * * * *", () => {
+	logger.debug("Cron job started ticking");
 	void checkApi();
 });
 
-console.log("Cron job scheduled to run every 5 minutes");
+logger.info("The Cron job is scheduled to run every 5 minutes");

@@ -1,12 +1,13 @@
 import { Elysia } from "elysia";
+import { logger } from "./lib/constants";
 import { processDiscordIncident } from "./lib/functions/processDiscordIncident";
 import { webhookPostRequestSchema } from "./lib/zod";
 
 const app = new Elysia()
 	.onAfterResponse(async (ctx) => {
-		// ctx.url exists but ctx.request.url likes to be an empty string
-		const url = "url" in ctx ? ctx.url : ctx.request.url || ctx.route;
-		console.log(`${ctx.set.status} ${ctx.request.method} ${url}`);
+		logger.info(
+			`Elysia: ${ctx.set.status} ${ctx.request.method} ${ctx.path}`,
+		);
 	})
 	.get("/", () => "Nothing to see here")
 	.post(
@@ -17,7 +18,7 @@ const app = new Elysia()
 				const { old_status, new_status, component_type } =
 					body.component_update;
 
-				console.log(
+				logger.info(
 					`DiscordComponent[${id}] The ${name} ${component_type} updated from ${old_status} to ${new_status}`,
 				);
 
@@ -34,6 +35,6 @@ const app = new Elysia()
 	)
 	.listen(3000);
 
-console.log(
+logger.info(
 	`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`,
 );

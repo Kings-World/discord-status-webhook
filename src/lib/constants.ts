@@ -1,5 +1,6 @@
-import { env } from "./env.js";
-import type { IncidentStatusEnum } from "./zod.js";
+import { env } from "./env";
+import { Logger } from "./logger";
+import type { IncidentStatusEnum } from "./zod";
 
 export const incidentsJsonUrl =
 	"https://discordstatus.com/api/v2/incidents.json";
@@ -19,3 +20,5 @@ export const statusEmojis: Record<IncidentStatusEnum, string | undefined> = {
 	resolved: env.RESOLVED_STATUS_EMOJI,
 	postmortem: env.RESOLVED_STATUS_EMOJI,
 };
+
+export const logger = new Logger();

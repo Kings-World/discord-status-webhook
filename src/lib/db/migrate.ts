@@ -1,23 +1,29 @@
 import { join } from "node:path";
 import { drizzle } from "drizzle-orm/postgres-js";
 import { migrate } from "drizzle-orm/postgres-js/migrator";
-import { env } from "../env.js";
+import { logger } from "../constants";
+import { env } from "../env";
 
 const db = drizzle(env.DATABASE_URL);
 
-console.log("Running database migrations...");
+logger.info("Running database migrations...");
 
 try {
 	await migrate(db, {
 		migrationsFolder: join(process.cwd(), "migrations"),
 	});
-} catch {
-	/*
-	if (Error.isError(error)) {
-		console.error("Error running database migrations:", error.message);
+} catch (error) {
+	if (Error.isError(error) && error.cause && Error.isError(error.cause)) {
+		if ("code" in error.cause && error.cause.code === "ECONNREFUSED") {
+			logger.error(
+				"Failed to connect to the database: connection refused",
+			);
+			process.exit(1);
+		}
 	}
-	process.exit(1);
-	*/
+
+	// purposefully ignoring errors because drizzle throws
+	// even when migrations are up to date
 }
 
-console.log("Database migrations completed.");
+logger.info("Database migrations completed.");

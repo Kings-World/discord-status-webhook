@@ -1,11 +1,11 @@
 import { eq } from "drizzle-orm";
 import { DateTime } from "luxon";
-import { db } from "../db/drizzle.js";
-import { discordStatus } from "../db/schema.js";
-import type { IncidentSchema } from "../zod.js";
-import { createAndSendStatus } from "./createAndSendStatus.js";
-import { isResolveStatus } from "./isResolveStatus.js";
-import { updateStatus } from "./updateStatus.js";
+import { db } from "../db/drizzle";
+import { discordStatus } from "../db/schema";
+import type { IncidentSchema } from "../zod";
+import { createAndSendStatus } from "./createAndSendStatus";
+import { isResolveStatus } from "./isResolveStatus";
+import { updateStatus } from "./updateStatus";
 
 export async function processDiscordIncident(incident: IncidentSchema) {
 	const status = await db.query.discordStatus.findFirst({

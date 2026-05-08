@@ -1,33 +1,41 @@
 import { eq } from "drizzle-orm";
-import { db } from "../db/drizzle.js";
-import { discordStatus } from "../db/schema.js";
-import { editWebhookMessage } from "../webhook.js";
-import type { IncidentSchema } from "../zod.js";
-import { createEmbed } from "./createEmbed.js";
+import { logger } from "../constants";
+import { db } from "../db/drizzle";
+import { discordStatus } from "../db/schema";
+import { editWebhookMessage } from "../webhook";
+import type { IncidentSchema } from "../zod";
+import { createEmbed } from "./createEmbed";
 
 export async function updateStatus(
 	status: typeof discordStatus.$inferSelect,
 	incident: IncidentSchema,
 ) {
 	if (!incident.incident_updates[0]) {
-		return console.warn(
+		return logger.warn(
 			`DiscordStatus[${incident.id}] Skipping update for ${incident.name} because no incident updates were found`,
 		);
 	}
 
-	console.log(
+	logger.info(
 		`DiscordStatus[${incident.id}] Updating ${incident.name} from ${status.status} to ${incident.status}`,
 	);
 
-	await editWebhookMessage(status.messageId, {
-		embeds: [createEmbed(incident)],
-	});
+	try {
+		await editWebhookMessage(status.messageId, {
+			embeds: [createEmbed(incident)],
+		});
 
-	await db
-		.update(discordStatus)
-		.set({
-			status: incident.status,
-			updateId: incident.incident_updates[0].id,
-		})
-		.where(eq(discordStatus.incidentId, incident.id));
+		await db
+			.update(discordStatus)
+			.set({
+				status: incident.status,
+				updateId: incident.incident_updates[0].id,
+			})
+			.where(eq(discordStatus.incidentId, incident.id));
+	} catch (error) {
+		logger.error(
+			`DiscordStatus[${incident.id}] Something went wrong while updating ${incident.name} from ${status.status} to ${incident.status}`,
+			error,
+		);
+	}
 }
