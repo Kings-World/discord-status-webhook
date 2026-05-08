@@ -1,8 +1,8 @@
-import ky, { isTimeoutError } from "ky";
+import ky, { isHTTPError, isTimeoutError } from "ky";
 import { prettifyError } from "zod";
-import { incidentsJsonUrl } from "../constants.js";
-import { incidentsRequestSchema } from "../zod.js";
-import { processDiscordIncident } from "./processDiscordIncident.js";
+import { incidentsJsonUrl, logger } from "../constants";
+import { incidentsRequestSchema } from "../zod";
+import { processDiscordIncident } from "./processDiscordIncident";
 
 export async function checkApi() {
 	try {
@@ -10,7 +10,7 @@ export async function checkApi() {
 		const parsed = incidentsRequestSchema.safeParse(body);
 
 		if (!parsed.success) {
-			console.error(
+			logger.error(
 				`Failed to parse request body with reason:\n${prettifyError(parsed.error)}`,
 			);
 			return;
@@ -21,12 +21,18 @@ export async function checkApi() {
 		}
 	} catch (error) {
 		if (isTimeoutError(error)) {
-			return console.warn(
-				"The request to fetch incidents timed out, skipping...",
+			return logger.warn(
+				"The request to fetch incidents timed out. Will retry next time.",
 			);
 		}
 
-		console.error(
+		if (isHTTPError(error)) {
+			return logger.warn(
+				`The request to fetch incidents failed with status ${error.response.status} (${error.message}). Will retry next time.`,
+			);
+		}
+
+		logger.error(
 			"Something went wrong while fetching the incidents",
 			error,
 		);

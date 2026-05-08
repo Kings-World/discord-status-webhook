@@ -1,8 +1,8 @@
 import type { APIEmbed } from "@discordjs/core/http-only";
 import { time } from "@discordjs/formatters";
 import { toTitleCase } from "@sapphire/utilities";
-import { statusColors, statusEmojis } from "../constants.js";
-import type { IncidentSchema } from "../zod.js";
+import { statusColors, statusEmojis } from "../constants";
+import type { IncidentSchema } from "../zod";
 
 export function createEmbed(incident: IncidentSchema): APIEmbed {
 	return {
