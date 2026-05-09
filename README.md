@@ -17,7 +17,7 @@ services:
       # [Optional] Only required if you want to "Subscribe to Updates" on discordstatus.com.
       - "3000:3000"
     environment:
-      # [Required] The URL of the postgres database
+      # [Required] The URL of the Postgres database
       - DATABASE_URL=
       # [Required] The ID of the Discord Webhook to send status updates to
       - WEBHOOK_ID=
@@ -73,7 +73,7 @@ bun run start
 
 ### Emojis
 
-The emojis that I use can be found in the [/emojis](/emojis) directory. Upload them to your server and set the environment variables to their IDs.
+The emojis that I use can be found in the [emojis](/emojis) directory. Upload them to your server and set the environment variables to their IDs.
 
 #### How do I get the IDs?
 
