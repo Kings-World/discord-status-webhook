@@ -24,7 +24,7 @@ jobs:
         run: echo "::add-matcher::.github/tsc.json"
 
       - name: Install Dependencies
-        run: bun install --frozen-lockfile
+        run: bun install --frozen-lockfile --ignore-scripts
 
       - name: Check types
         run: bunx tsc --pretty false
@@ -59,7 +59,7 @@ jobs:
         uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
 
       - name: Install Dependencies
-        run: bun install --frozen-lockfile
+        run: bun install --frozen-lockfile --ignore-scripts
 
       # https://commitlint.js.org/guides/ci-setup#github-actions
       - name: Validate current commit (last commit) with commitlint
