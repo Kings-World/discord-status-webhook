@@ -1,0 +1,8 @@
+* @SerenModz21
+
+# reset for renovate prs
+/.github/workflows/*.yml
+/.github/renovate.json
+/biome.json
+/bun.lock
+/package.json
