@@ -43,4 +43,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Deploy Changes
-        run: curl -X POST ${{ secrets.PORTAINER_WEBHOOK }}
+        run: curl -X POST ${{ env.WEBHOOK_URL }}
+        env:
+          WEBHOOK_URL: ${{ secrets.PORTAINER_WEBHOOK }}
+
