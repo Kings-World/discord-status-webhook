@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 0
 
       - name: Automatic Release
-        uses: SerenModz21/github-action-npm-release@c2c77c834a6abd0fe18209f3767420583aee7800 # master
+        uses: SerenModz21/github-action-npm-release@937db2a2f63bfb0fff28c643eb8f4dd1cea98123 # master
         id: release
 
       - name: Display Release ID
