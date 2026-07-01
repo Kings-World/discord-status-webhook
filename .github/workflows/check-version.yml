@@ -21,6 +21,7 @@ jobs:
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Automatic Release
         uses: SerenModz21/github-action-npm-release@e946f480a065f1a8b1d3ebf5a822bf97d5316a69 # master
@@ -29,16 +30,24 @@ jobs:
       - name: Display Release ID
         if: ${{ steps.release.outputs.released == 'true' }}
         run: |
-          echo Release ID: ${{ steps.release.outputs.release_id }}
-          echo Release Name: ${{ steps.release.outputs.release_name }}
-          echo Release Tag: ${{ steps.release.outputs.release_tag }}
-          echo Prerelease: ${{ steps.release.outputs.prerelease }}
-          echo Draft: ${{ steps.release.outputs.draft }}
-          echo URL: ${{ steps.release.outputs.html_url }}
+          echo Release ID: "${RELEASE_ID}"
+          echo Release Name: "${RELEASE_NAME}"
+          echo Release Tag: "${RELEASE_TAG}"
+          echo Prerelease: "${PRERELEASE}"
+          echo Draft: "${DRAFT}"
+          echo URL: "${HTML_URL}"
+        env:
+          RELEASE_ID: ${{ steps.release.outputs.release_id }}
+          RELEASE_NAME: ${{ steps.release.outputs.release_name }}
+          RELEASE_TAG: ${{ steps.release.outputs.release_tag }}
+          PRERELEASE: ${{ steps.release.outputs.prerelease }}
+          DRAFT: ${{ steps.release.outputs.draft }}
+          HTML_URL: ${{ steps.release.outputs.html_url }}
 
       - name: Publish Version
         if: ${{ steps.release.outputs.released == 'true' }}
         run: |
-          gh workflow run publish.yml -r ${{ steps.release.outputs.release_tag }}
+          gh workflow run publish.yml -r "${RELEASE_TAG}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG: ${{ steps.release.outputs.release_tag }}
