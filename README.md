@@ -46,6 +46,11 @@ Additional commands:
 - Follow the logs: `docker compose logs -f`
 - Stop the Discord status webhook: `docker compose down`
 
+Additional environment variables:
+
+- `DEBUG=true`: Enable debug logs.
+- `UPDATES_EDIT_MESSAGE=false`: Send updates as new messages instead of editing the existing message.
+
 ### Manual
 
 This method is for technical people!
