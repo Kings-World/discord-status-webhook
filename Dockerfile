@@ -7,8 +7,7 @@ WORKDIR /app
 
 COPY --chmod=444 package.json bun.lock ./
 
-RUN --mount=type=cache,id=bun,target=/root/.bun/install/cache \
-	bun install --frozen-lockfile --production --ignore-scripts
+RUN bun install --frozen-lockfile --production --ignore-scripts
 
 COPY --chmod=555 ./src ./src
 
