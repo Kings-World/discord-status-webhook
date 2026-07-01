@@ -2,9 +2,9 @@ import { eq } from "drizzle-orm";
 import { logger } from "../constants";
 import { db } from "../db/drizzle";
 import { discordStatus } from "../db/schema";
-import { editWebhookMessage } from "../webhook";
+import { env } from "../env";
+import { editWebhookMessage, sendWebhookMessage } from "../webhook";
 import type { IncidentSchema } from "../zod";
-import { createEmbed } from "./createEmbed";
 
 export async function updateStatus(
 	status: typeof discordStatus.$inferSelect,
@@ -21,9 +21,11 @@ export async function updateStatus(
 	);
 
 	try {
-		await editWebhookMessage(status.messageId, {
-			embeds: [createEmbed(incident)],
-		});
+		if (env.UPDATES_EDIT_MESSAGE) {
+			await editWebhookMessage(status.messageId, incident);
+		} else {
+			await sendWebhookMessage(incident);
+		}
 
 		await db
 			.update(discordStatus)

@@ -1,10 +1,8 @@
 import { logger } from "../constants";
 import { db } from "../db/drizzle";
 import { discordStatus } from "../db/schema";
-import { env } from "../env";
 import { sendWebhookMessage } from "../webhook";
 import type { IncidentSchema } from "../zod";
-import { createEmbed } from "./createEmbed";
 
 export async function createAndSendStatus(incident: IncidentSchema) {
 	if (!incident.incident_updates[0]) {
@@ -18,12 +16,7 @@ export async function createAndSendStatus(incident: IncidentSchema) {
 	);
 
 	try {
-		const message = await sendWebhookMessage({
-			content: env.ROLE_ID && `<@&${env.ROLE_ID}>`,
-			allowed_mentions: { roles: env.ROLE_ID ? [env.ROLE_ID] : [] },
-			embeds: [createEmbed(incident)],
-			wait: true,
-		});
+		const message = await sendWebhookMessage(incident);
 
 		await db.insert(discordStatus).values({
 			incidentId: incident.id,
