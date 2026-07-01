@@ -1,6 +1,6 @@
 {
 	"name": "discord-status-webhook",
-	"version": "2.2.0",
+	"version": "2.3.0",
 	"main": "src/index.ts",
 	"author": "Seren_Modz 21",
 	"license": "MIT",
