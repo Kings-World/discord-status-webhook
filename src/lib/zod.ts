@@ -43,7 +43,7 @@ export const incidentSchema = z.object({
 	// https://github.com/almostSouji/discord-status-webhook/blob/main/src/interfaces/StatusPage.ts#L44
 	status: incidentStatusEnum,
 	created_at: z.coerce.date(),
-	updated_at: z.coerce.date(),
+	updated_at: z.coerce.date().nullable(),
 	monitoring_at: z.coerce.date().nullable(),
 	resolved_at: z.coerce.date().nullable(),
 	// https://github.com/almostSouji/discord-status-webhook/blob/main/src/interfaces/StatusPage.ts#L45
