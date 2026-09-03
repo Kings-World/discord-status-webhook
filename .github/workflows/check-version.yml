@@ -24,7 +24,7 @@ jobs:
           persist-credentials: false
 
       - name: Automatic Release
-        uses: SerenModz21/github-action-npm-release@e8145b175c99f01102f7a7e55096aa5cbcb0d3aa # master
+        uses: SerenModz21/github-action-npm-release@e5871a74046abf8f64f4e1b2c456e89f78c2544e # master
         id: release
 
       - name: Display Release ID
