@@ -22,14 +22,11 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
 
-      - name: Add TypeScript problem matcher
-        run: echo "::add-matcher::.github/tsc.json"
-
       - name: Install Dependencies
         run: bun install --frozen-lockfile --ignore-scripts
 
       - name: Check types
-        run: bun run tsc --pretty false
+        run: bun check
 
   biome:
     name: Check Biome formatting and linting
