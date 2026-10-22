@@ -1,10 +1,10 @@
 {
 	"name": "discord-status-webhook",
 	"version": "2.3.1",
-	"main": "src/index.ts",
-	"author": "Seren_Modz 21",
 	"license": "MIT",
+	"author": "Seren_Modz 21",
 	"type": "module",
+	"main": "src/index.ts",
 	"scripts": {
 		"start": "bun run .",
 		"dev": "bun run --watch .",
