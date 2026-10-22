@@ -48,4 +48,3 @@ jobs:
         run: curl -X POST "${WEBHOOK_URL}"
         env:
           WEBHOOK_URL: ${{ secrets.PORTAINER_WEBHOOK }}
-
