@@ -40,14 +40,12 @@ After creating `compose.yml` with the above, you can start the stack with `docke
 When you run `docker compose up -d` for the first time, Docker will pull the image before starting the Discord status webhook.
 
 Additional commands:
-
 - Pull the image manually: `docker compose pull`
 - View the logs: `docker compose logs`
 - Follow the logs: `docker compose logs -f`
 - Stop the Discord status webhook: `docker compose down`
 
 Additional environment variables:
-
 - `DEBUG=true`: Enable debug logs.
 - `UPDATES_EDIT_MESSAGE=false`: Send updates as new messages instead of editing the existing message.
 
